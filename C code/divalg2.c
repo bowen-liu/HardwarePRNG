@@ -34,30 +34,23 @@ int mu(int Y)
 {
 	int ret_val = (Y >= 0 ? 1:-1);
 	
-	printf("mu=%d\t", ret_val);
+	printf("mu=%d,\t", ret_val);
 	return ret_val;
 }
 
-int delta(int Y, int X, int *py_out, int *px_out)
+int findPy(int Y)
 {
-	int px = findMS(X, 1);		//Find the most significant bit that's 1 in X
-	int py;
-	int ret_val;
-	
 	if(Y > 0)
-		py = findMS(Y, 1);	
+		return findMS(Y, 1);	//Find the most significant bit that's 1 in y
 	else if (Y < 0)
-		py = findMS(Y, 0);	//Find the most significant bit that's 0 in y
+		return findMS(Y, 0);	//Find the most significant bit that's 0 in y
 	else 
-		py = 0;
-	
-	*py_out = py;			//Return py and px
-	*px_out = px;
-	
-	ret_val = (1<<(py-px));		//2^(py-px)
-	
-	printf("delta= %d,\t", ret_val);
-	return ret_val; 		
+		return 0;
+}
+
+int findPx(int X)
+{
+	return findMS(X, 1);
 }
 
 int mu_phase2(int Y, int X)
@@ -80,21 +73,28 @@ int mu_phase2(int Y, int X)
 void divide(int Y, int X, int *r, int *q)
 {
 	int Z = 0;
-	int px = 0;			//Position of Leading 1 or 0 for Y and X
-	int py = 0;
+	int py = findPy(Y);
+	int px = findPx(X);
 	
-	int temp;		
+	int i = 0;
+	int temp;
 	
+	printf("\ni=%d\tY=%d,\tZ=%d,\t", i, Y, Z);
+
 	//Algorithm Phase 1
-	do
+	while(py > px)
 	{
-		printf("\nY=%d,\tZ=%d,\t", Y, Z);
-		
-		temp = mu(Y) * delta(Y,X,&py,&px);
+		temp = mu(Y) * (1<<(py-px));	//mu*delta
+		printf("delta=%d", 1<<(py-px));
 		Y = Y - temp * X;
 		Z = Z + temp;
+		
+		printf("\ni=%d\tY=%d,\tZ=%d,\t", ++i, Y, Z);
+		
+		py=findPy(Y);
+		px=findPx(X);	
 	}
-	while(py > px);
+	printf("\nEnd of phase 1. Y=%d, Z=%d", Y, Z);
 	
 	//Algorithm Phase 2
 	if (!(Y >= 0 && Y < X))
@@ -103,6 +103,7 @@ void divide(int Y, int X, int *r, int *q)
 		Y = Y - temp*X;
 		Z = Z + temp;
 	}
+	printf("\nEnd of phase 2. Y=%d, Z=%d", Y, Z);
 	
 	//Return quotient and remainder
 	*r = Y;
@@ -124,7 +125,6 @@ int main(int argc, char *argv[])
 	X = atoi(argv[2]);
 	
 	printf("Inputs: Y = %d, X = %d\n\n", Y, X);
-	printf("Division Iterations:");
 	divide(Y, X, &r, &q);
-	printf("\n\nRemainder = %u, Quotient = %u\n", r, q);	
+	printf("\nRemainder = %u, Quotient = %u\n", r, q);	
 }
