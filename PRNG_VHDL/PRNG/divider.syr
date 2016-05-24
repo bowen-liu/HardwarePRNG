@@ -1,0 +1,521 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: divider.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "divider.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "divider"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-fg320
+
+---- Source Options
+Top Module Name                    : divider
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" in Library work.
+Architecture behavioral of Entity divider is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <divider> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <divider> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 159: Width mismatch. <temp1> has a width of 32 bits but assigned expression is 64-bit wide.
+WARNING:Xst:1610 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 160: Width mismatch. <temp2> has a width of 32 bits but assigned expression is 64-bit wide.
+WARNING:Xst:1610 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 162: Width mismatch. <temp3> has a width of 32 bits but assigned expression is 64-bit wide.
+WARNING:Xst:1610 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 169: Width mismatch. <temp1> has a width of 32 bits but assigned expression is 64-bit wide.
+WARNING:Xst:1610 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 170: Width mismatch. <temp2> has a width of 32 bits but assigned expression is 64-bit wide.
+Entity <divider> analyzed. Unit <divider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd".
+WARNING:Xst:1306 - Output <output_ready> is never assigned.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 159: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider.vhd" line 169: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 32-bit register for signal <R>.
+    Found 32-bit register for signal <Q>.
+    Found 32-bit register for signal <delta>.
+    Found 6-bit subtractor for signal <delta_temp_9$sub0000> created at line 135.
+    Found 1-bit register for signal <divider_busy>.
+    Found 2-bit register for signal <mu_phase1>.
+    Found 2-bit register for signal <mu_phase2>.
+    Found 32-bit comparator greatequal for signal <mu_phase2$cmp_ge0000> created at line 121.
+    Found 1-bit register for signal <operands_valid>.
+    Found 5-bit register for signal <px>.
+    Found 5-bit register for signal <py>.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 85.
+    Found 32-bit comparator less for signal <py$cmp_lt0000> created at line 81.
+    Found 32-bit register for signal <X_buffer>.
+    Found 32-bit register for signal <Y_buffer>.
+    Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
+    Found 32x2-bit multiplier for signal <Y_buffer$mult0000> created at line 159.
+    Found 32x2-bit multiplier for signal <Y_buffer$mult0001> created at line 169.
+    Found 32-bit register for signal <Z>.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 168.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 158.
+    Found 5-bit comparator lessequal for signal <Z$cmp_le0000> created at line 158.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 168.
+    Found 32-bit adder for signal <Z$mux0000>.
+    Summary:
+	inferred 208 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   7 Comparator(s).
+Unit <divider> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x2-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 2
+ 2-bit register                                        : 2
+ 32-bit register                                       : 6
+ 5-bit register                                        : 2
+# Comparators                                          : 7
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <divider>.
+The following registers are absorbed into accumulator <Y_buffer>: 1 register on signal <Y_buffer>.
+	Found pipelined multiplier on signal <Y_buffer_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <delta_dbg>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <mu2_dbg>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <Y_buffer_mult0001>:
+		- 1 pipeline level(s) found in a register on signal <X_buf_dbg>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_Y_buffer_mult0000 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_Y_buffer_mult0001 by adding 2 register level(s).
+Unit <divider> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x2-bit registered multiplier                        : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 6-bit subtractor                                      : 1
+# Accumulators                                         : 1
+ 32-bit down loadable accumulator                      : 1
+# Registers                                            : 176
+ Flip-Flops                                            : 176
+# Comparators                                          : 7
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mmult_Y_buffer_mult00001_1> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <X_buffer_7> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_24> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_10> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_21> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_8> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_23> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_11> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_20> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_9> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_22> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_12> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_19> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_13> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_18> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_14> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_17> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_15> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_16> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_20> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_11> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_16> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_15> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_21> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_10> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_17> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_14> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_22> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_9> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_18> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_13> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_23> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_8> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_19> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_12> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_24> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_7> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_25> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_6> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_30> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_1> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_26> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_5> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_31> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_0> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_27> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_4> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_28> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_3> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_29> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_2> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_0> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_31> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_1> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_30> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_2> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_29> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_3> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_28> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_4> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_27> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_5> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_26> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_6> in Unit <divider> is equivalent to the following FF/Latch, which will be removed : <Mmult_Y_buffer_mult0001_25> 
+
+Optimizing unit <divider> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block divider, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 239
+ Flip-Flops                                            : 239
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : divider.ngr
+Top Level Output File Name         : divider
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 390
+
+Cell Usage :
+# BELS                             : 811
+#      GND                         : 1
+#      INV                         : 5
+#      LUT2                        : 58
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 88
+#      LUT3_L                      : 3
+#      LUT4                        : 314
+#      LUT4_D                      : 5
+#      LUT4_L                      : 18
+#      MUXCY                       : 168
+#      MUXF5                       : 15
+#      VCC                         : 1
+#      XORCY                       : 132
+# FlipFlops/Latches                : 239
+#      FDE                         : 194
+#      FDE_1                       : 44
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 387
+#      IBUF                        : 65
+#      OBUF                        : 322
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-5 
+
+ Number of Slices:                      264  out of   8672     3%  
+ Number of Slice Flip Flops:            239  out of  17344     1%  
+ Number of 4 input LUTs:                494  out of  17344     2%  
+ Number of IOs:                         390
+ Number of bonded IOBs:                 388  out of    250   155% (*) 
+ Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 239   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 20.218ns (Maximum Frequency: 49.462MHz)
+   Minimum input arrival time before clock: 9.660ns
+   Maximum output required time after clock: 4.777ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 20.218ns (frequency: 49.462MHz)
+  Total number of paths / destination ports: 130200 / 446
+-------------------------------------------------------------------------
+Delay:               10.109ns (Levels of Logic = 10)
+  Source:            Y_buffer_2 (FF)
+  Destination:       py_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: Y_buffer_2 to py_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.514   0.969  Y_buffer_2 (Y_buffer_2)
+     LUT4_L:I0->LO         1   0.612   0.103  py_mux0000<3>17 (py_mux0000<3>17)
+     LUT4:I3->O            1   0.612   0.360  py_mux0000<3>39_SW1 (N353)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0000<3>39 (py_mux0000<3>39)
+     LUT4:I3->O            1   0.612   0.360  py_mux0000<3>84_SW0 (N265)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0000<3>84 (py_mux0000<3>84)
+     LUT4:I3->O            1   0.612   0.360  py_mux0000<3>121_SW1 (N349)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0000<3>121 (py_mux0000<3>121)
+     LUT4:I3->O            1   0.612   0.360  py_mux0000<3>167_SW0 (N285)
+     LUT4:I3->O            1   0.612   0.357  py_mux0000<3>167 (py_mux0000<3>167)
+     MUXF5:S->O            1   0.641   0.000  py_mux0000<3>406 (py_mux0000<3>)
+     FDE_1:D                   0.268          py_1
+    ----------------------------------------
+    Total                     10.109ns (6.931ns logic, 3.178ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1933 / 129
+-------------------------------------------------------------------------
+Offset:              9.660ns (Levels of Logic = 37)
+  Source:            start (PAD)
+  Destination:       Y_buffer_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to Y_buffer_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.106   1.104  start_IBUF (start_IBUF)
+     LUT3:I2->O           66   0.612   1.234  operands_valid_and00001 (Y_buffer_eqn)
+     LUT3:I0->O            1   0.612   0.426  Y<0>_SW0 (N99)
+     LUT4:I1->O            1   0.612   0.426  Y<0> (Y<0>1)
+     LUT3:I1->O            1   0.612   0.000  Maccum_Y_buffer_lut<0> (Maccum_Y_buffer_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Maccum_Y_buffer_cy<0> (Maccum_Y_buffer_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<1> (Maccum_Y_buffer_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<2> (Maccum_Y_buffer_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<3> (Maccum_Y_buffer_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<4> (Maccum_Y_buffer_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<5> (Maccum_Y_buffer_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<6> (Maccum_Y_buffer_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<7> (Maccum_Y_buffer_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<8> (Maccum_Y_buffer_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<9> (Maccum_Y_buffer_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<10> (Maccum_Y_buffer_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<11> (Maccum_Y_buffer_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<12> (Maccum_Y_buffer_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<13> (Maccum_Y_buffer_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<14> (Maccum_Y_buffer_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<15> (Maccum_Y_buffer_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<16> (Maccum_Y_buffer_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<17> (Maccum_Y_buffer_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<18> (Maccum_Y_buffer_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<19> (Maccum_Y_buffer_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<20> (Maccum_Y_buffer_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<21> (Maccum_Y_buffer_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<22> (Maccum_Y_buffer_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<23> (Maccum_Y_buffer_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<24> (Maccum_Y_buffer_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<25> (Maccum_Y_buffer_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<26> (Maccum_Y_buffer_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<27> (Maccum_Y_buffer_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<28> (Maccum_Y_buffer_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<29> (Maccum_Y_buffer_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Maccum_Y_buffer_cy<30> (Maccum_Y_buffer_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  Maccum_Y_buffer_xor<31> (Result<31>)
+     FDE:D                     0.268          Y_buffer_31
+    ----------------------------------------
+    Total                      9.660ns (6.470ns logic, 3.190ns route)
+                                       (67.0% logic, 33.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 266 / 266
+-------------------------------------------------------------------------
+Offset:              4.777ns (Levels of Logic = 1)
+  Source:            operands_valid (FF)
+  Destination:       operands_valid_dbg (PAD)
+  Source Clock:      clk rising
+
+  Data Path: operands_valid to operands_valid_dbg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q           109   0.514   1.094  operands_valid (operands_valid)
+     OBUF:I->O                 3.169          operands_valid_dbg_OBUF (operands_valid_dbg)
+    ----------------------------------------
+    Total                      4.777ns (3.683ns logic, 1.094ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.07 secs
+ 
+--> 
+
+Total memory usage is 312064 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :   35 (   0 filtered)
+

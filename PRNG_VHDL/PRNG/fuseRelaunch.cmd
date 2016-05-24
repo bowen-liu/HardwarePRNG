@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider_tb_isim_beh.exe" -prj "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider_tb_beh.prj" "work.divider_tb" 
