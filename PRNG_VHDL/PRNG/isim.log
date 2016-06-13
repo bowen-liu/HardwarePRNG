@@ -8,3 +8,298 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 5 ns(1): Note: FindMS1: X=127773 i=16 (/divider_test2tb/uut/).
+at 5 ns(1): Note: Finished loading initial values (/divider_test2tb/uut/).
+at 10 ns(1): Note: FindMS1: X=2072086837 i=30 (/divider_test2tb/uut/).
+at 15 ns(1): Note: Finished py>px calc. tempi1: 16384 tempi2: -21345995 tempi3: 16384 (/divider_test2tb/uut/).
+at 20 ns(1): Note: FindMS0: X=-21345995 i=24 (/divider_test2tb/uut/).
+at 25 ns(1): Note: Finished py>px calc. tempi1: -256 tempi2: 11363893 tempi3: 16128 (/divider_test2tb/uut/).
+at 30 ns(1): Note: FindMS1: X=11363893 i=23 (/divider_test2tb/uut/).
+at 35 ns(1): Note: Finished py>px calc. tempi1: 128 tempi2: -4991051 tempi3: 16256 (/divider_test2tb/uut/).
+at 40 ns(1): Note: FindMS0: X=-4991051 i=22 (/divider_test2tb/uut/).
+at 45 ns(1): Note: Finished py>px calc. tempi1: -64 tempi2: 3186421 tempi3: 16192 (/divider_test2tb/uut/).
+at 50 ns(1): Note: FindMS1: X=3186421 i=21 (/divider_test2tb/uut/).
+at 55 ns(1): Note: Finished py>px calc. tempi1: 32 tempi2: -902315 tempi3: 16224 (/divider_test2tb/uut/).
+at 60 ns(1): Note: FindMS0: X=-902315 i=19 (/divider_test2tb/uut/).
+at 65 ns(1): Note: Finished py>px calc. tempi1: -8 tempi2: 119869 tempi3: 16216 (/divider_test2tb/uut/).
+at 70 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 70 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 75 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 80 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 80 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 85 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 90 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 90 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 95 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 100 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 100 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 105 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 110 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 110 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 115 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 120 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 120 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 125 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 130 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 130 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 135 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 140 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 140 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 145 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 150 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 150 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 155 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 160 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 160 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 165 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 170 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 170 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 175 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 180 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 180 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 185 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 190 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 190 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 195 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 200 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 200 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 205 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 210 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 210 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 215 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 220 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 220 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 225 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 230 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 230 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 235 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 240 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 240 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 245 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 250 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 250 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 255 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 260 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 260 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 265 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 270 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 270 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 275 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 280 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 280 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 285 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 290 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 290 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 295 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 300 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 300 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 305 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 310 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 310 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 315 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 320 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 320 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 325 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 330 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 330 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 335 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 340 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 340 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 345 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 350 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 350 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 355 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 360 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 360 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 365 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 370 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 370 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 375 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 380 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 380 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 385 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 390 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 390 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 395 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 400 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 400 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 405 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 410 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 410 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 415 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 420 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 420 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 425 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 430 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 430 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 435 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 440 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 440 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 445 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 450 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 450 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 455 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 460 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 460 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 465 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 470 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 470 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 475 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 480 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 480 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 485 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 490 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 490 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 495 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 500 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 500 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 505 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 510 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 510 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 515 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 520 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 520 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 525 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 530 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 530 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 535 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 540 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 540 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 545 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 550 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 550 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 555 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 560 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 560 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 565 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 570 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 570 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 575 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 580 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 580 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 585 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 590 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 590 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 595 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 600 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 600 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 605 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 610 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 610 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 615 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 620 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 620 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 625 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 630 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 630 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 635 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 640 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 640 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 645 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 650 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 650 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 655 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 660 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 660 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 665 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 670 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 670 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 675 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 680 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 680 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 685 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 690 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 690 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 695 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 700 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 700 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 705 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 710 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 710 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 715 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 720 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 720 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 725 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 730 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 730 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 735 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 740 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 740 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 745 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 750 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 750 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 755 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 760 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 760 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 765 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 770 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 770 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 775 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 780 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 780 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 785 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 790 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 790 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 795 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 800 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 800 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 805 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 810 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 810 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 815 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 820 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 820 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 825 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 830 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 830 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 835 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 840 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 840 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 845 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 850 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 850 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 855 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 860 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 860 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 865 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 870 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 870 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 875 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 880 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 880 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 885 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 890 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 890 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 895 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 900 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 900 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 905 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 910 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 910 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 915 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 920 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 920 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 925 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 930 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 930 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 935 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 940 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 940 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 945 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 950 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 950 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 955 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 960 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 960 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 965 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 970 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 970 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 975 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 980 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 980 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 985 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 990 ns(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 990 ns(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!
+at 995 ns(1): Note: Finished final output (/divider_test2tb/uut/).
+at 1 us(1): Note: FindMS1: X=119869 i=16 (/divider_test2tb/uut/).
+at 1 us(1), Instance /divider_test2tb/uut/ : Warning: ***WARNING: bit_pos <= 0!

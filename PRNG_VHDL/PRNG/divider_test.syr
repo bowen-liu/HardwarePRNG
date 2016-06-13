@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: divider_test.prj
 
@@ -137,33 +137,33 @@ WARNING:Xst:1306 - Output <temp3_dbg> is never assigned.
 WARNING:Xst:1306 - Output <temp4_dbg> is never assigned.
 WARNING:Xst:1306 - Output <temp1_dbg> is never assigned.
 WARNING:Xst:653 - Signal <operands_valid> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 172: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 183: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 172: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 170: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 184: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 169: The result of a 32x2-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 32-bit register for signal <R>.
     Found 32-bit register for signal <Q>.
     Found 32-bit register for signal <delta>.
-    Found 6-bit comparator greater for signal <delta_temp_9$cmp_gt0000> created at line 145.
-    Found 6-bit subtractor for signal <delta_temp_9$sub0000> created at line 142.
+    Found 6-bit comparator greater for signal <delta_temp_9$cmp_gt0000> created at line 140.
+    Found 6-bit subtractor for signal <delta_temp_9$sub0000> created at line 137.
     Found 1-bit register for signal <divider_busy>.
-    Found 5-bit comparator lessequal for signal <divider_busy$cmp_le0000> created at line 166.
+    Found 5-bit comparator lessequal for signal <divider_busy$cmp_le0000> created at line 161.
     Found 2-bit register for signal <mu_phase1>.
     Found 2-bit register for signal <mu_phase2>.
-    Found 32-bit comparator greatequal for signal <mu_phase2$cmp_ge0000> created at line 128.
+    Found 32-bit comparator greatequal for signal <mu_phase2$cmp_ge0000> created at line 123.
     Found 5-bit register for signal <px>.
     Found 5-bit register for signal <py>.
-    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 92.
-    Found 32-bit comparator less for signal <py$cmp_lt0000> created at line 88.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 87.
+    Found 32-bit comparator less for signal <py$cmp_lt0000> created at line 83.
     Found 32-bit register for signal <X_buffer>.
     Found 32-bit register for signal <Y_buffer>.
     Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
-    Found 32x32-bit multiplier for signal <Y_buffer$mult0002> created at line 172.
-    Found 32x2-bit multiplier for signal <Y_buffer$mult0003> created at line 183.
-    Found 32x2-bit multiplier for signal <Y_buffer$mult0004> created at line 172.
+    Found 32x32-bit multiplier for signal <Y_buffer$mult0002> created at line 170.
+    Found 32x2-bit multiplier for signal <Y_buffer$mult0003> created at line 184.
+    Found 32x2-bit multiplier for signal <Y_buffer$mult0004> created at line 169.
     Found 32-bit up accumulator for signal <Z>.
-    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 181.
-    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 166.
-    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 181.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 182.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 161.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 182.
     Summary:
 	inferred   1 Accumulator(s).
 	inferred 175 D-type flip-flop(s).
@@ -587,12 +587,12 @@ Offset:              4.764ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.91 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.84 secs
  
 --> 
 
-Total memory usage is 328240 kilobytes
+Total memory usage is 328280 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   19 (   0 filtered)

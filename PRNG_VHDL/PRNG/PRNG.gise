@@ -59,6 +59,7 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -69,7 +70,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464169302" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1464169302">
+    <transform xil_pn:end_ts="1465800125" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1465800125">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="divide_2.vhd"/>
@@ -89,7 +90,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464169302" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1464169302">
+    <transform xil_pn:end_ts="1465800131" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1465800131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="divide_2.vhd"/>
@@ -97,20 +98,26 @@
       <outfile xil_pn:name="divider.vhd"/>
       <outfile xil_pn:name="divider_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1464169305" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6327641678042425046" xil_pn:start_ts="1464169302">
+    <transform xil_pn:end_ts="1465800135" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6327641678042425046" xil_pn:start_ts="1465800131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="divider_test2tb_beh.prj"/>
       <outfile xil_pn:name="divider_test2tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1464169306" xil_pn:in_ck="-3853795084472775971" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3956307000390134743" xil_pn:start_ts="1464169305">
+    <transform xil_pn:end_ts="1465800135" xil_pn:in_ck="-3853795084472775971" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3956307000390134743" xil_pn:start_ts="1465800135">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="divider_test2tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1463725790" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1463725790">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -140,13 +147,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464169034" xil_pn:in_ck="-3962646758630486835" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3102976588385280908" xil_pn:start_ts="1464169025">
+    <transform xil_pn:end_ts="1465791122" xil_pn:in_ck="-3962646758630486835" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3102976588385280908" xil_pn:start_ts="1465791110">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
