@@ -44,7 +44,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="divider_test.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="divider_test.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="divider_test.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="divider_test2tb_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="divider_test2tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="divider_test2tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="divider_test2tb_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="divider_test2tb_stx_beh.prj"/>
@@ -70,7 +70,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1465800125" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1465800125">
+    <transform xil_pn:end_ts="1465955763" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1465955763">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="divide_2.vhd"/>
@@ -78,11 +78,11 @@
       <outfile xil_pn:name="divider.vhd"/>
       <outfile xil_pn:name="divider_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1464169084" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3992301395513866916" xil_pn:start_ts="1464169084">
+    <transform xil_pn:end_ts="1465953937" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3992301395513866916" xil_pn:start_ts="1465953937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1464169084" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7538088049621969318" xil_pn:start_ts="1464169084">
+    <transform xil_pn:end_ts="1465953937" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7538088049621969318" xil_pn:start_ts="1465953937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -90,7 +90,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1465800131" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1465800131">
+    <transform xil_pn:end_ts="1465955763" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1465955763">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="divide_2.vhd"/>
@@ -98,7 +98,7 @@
       <outfile xil_pn:name="divider.vhd"/>
       <outfile xil_pn:name="divider_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1465800135" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6327641678042425046" xil_pn:start_ts="1465800131">
+    <transform xil_pn:end_ts="1465955766" xil_pn:in_ck="-2118468143767036827" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6327641678042425046" xil_pn:start_ts="1465955763">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -110,7 +110,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1465800135" xil_pn:in_ck="-3853795084472775971" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3956307000390134743" xil_pn:start_ts="1465800135">
+    <transform xil_pn:end_ts="1465955766" xil_pn:in_ck="-3853795084472775971" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3956307000390134743" xil_pn:start_ts="1465955766">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -147,7 +147,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1465791122" xil_pn:in_ck="-3962646758630486835" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3102976588385280908" xil_pn:start_ts="1465791110">
+    <transform xil_pn:end_ts="1465955637" xil_pn:in_ck="-3962646758630486835" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3102976588385280908" xil_pn:start_ts="1465955627">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -155,7 +155,6 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="divider_test.lso"/>
@@ -165,6 +164,7 @@
       <outfile xil_pn:name="divider_test.stx"/>
       <outfile xil_pn:name="divider_test.syr"/>
       <outfile xil_pn:name="divider_test.xst"/>
+      <outfile xil_pn:name="divider_test2tb_beh.prj"/>
       <outfile xil_pn:name="divider_test2tb_stx_beh.prj"/>
       <outfile xil_pn:name="divider_test_stx_beh.prj"/>
       <outfile xil_pn:name="divider_test_vhdl.prj"/>

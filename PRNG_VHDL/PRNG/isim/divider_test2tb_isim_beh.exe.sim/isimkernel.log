@@ -2,27 +2,27 @@ Command line:
    divider_test2tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  14297
+     -socket  17461
 
-Sun Jun 12 23:42:16 2016
+Tue Jun 14 18:56:08 2016
 
 
  Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 849.322 Meg
+ Current Memory Usage: 849.281 Meg
 
- Total Signals          : 54
- Total Nets             : 652
- Total Signal Drivers   : 30
+ Total Signals          : 41
+ Total Nets             : 521
+ Total Signal Drivers   : 23
  Total Blocks           : 4
  Total Primitive Blocks : 3
  Total Processes        : 16
  Total Traceable Variables  : 15
- Total Scalar Nets and Variables : 1137
+ Total Scalar Nets and Variables : 1006
 
- Total Simulation Time: 0.125 sec
+ Total Simulation Time: 0.109375 sec
 
- Current Memory Usage: 1163.89 Meg
+ Current Memory Usage: 849.281 Meg
 
-Sun Jun 12 23:42:54 2016
+Tue Jun 14 18:56:21 2016
 

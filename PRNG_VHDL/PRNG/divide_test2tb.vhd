@@ -20,8 +20,6 @@ ARCHITECTURE behavior OF divider_test2tb IS
          start : IN  std_logic;
          output_ready : OUT  std_logic;
 			
-			operands_valid_dbg : out  STD_LOGIC;
-			divider_busy_dbg : out STD_LOGIC;
 			Y_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			X_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			Z_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -29,11 +27,7 @@ ARCHITECTURE behavior OF divider_test2tb IS
 			py_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			mu1_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			mu2_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			delta_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			temp1_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			temp2_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			temp3_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			temp4_dbg : OUT STD_LOGIC_VECTOR (31 downto 0)
+			delta_dbg : OUT STD_LOGIC_VECTOR (31 downto 0)
         );
     END COMPONENT;
     
@@ -51,8 +45,6 @@ ARCHITECTURE behavior OF divider_test2tb IS
    signal output_ready : std_logic;
 	
 	--debugs
-	signal operands_valid_dbg : STD_LOGIC;
-	signal divider_busy_dbg : STD_LOGIC;
 	signal Y_buf_dbg : STD_LOGIC_VECTOR (31 downto 0);
 	signal X_buf_dbg : STD_LOGIC_VECTOR (31 downto 0);
 	signal Z_dbg : STD_LOGIC_VECTOR (31 downto 0);
@@ -61,10 +53,6 @@ ARCHITECTURE behavior OF divider_test2tb IS
 	signal mu1_dbg : STD_LOGIC_VECTOR (31 downto 0);
 	signal mu2_dbg : STD_LOGIC_VECTOR (31 downto 0);
 	signal delta_dbg : STD_LOGIC_VECTOR (31 downto 0);
-	signal temp1_dbg : STD_LOGIC_VECTOR (31 downto 0);
-	signal temp2_dbg : STD_LOGIC_VECTOR (31 downto 0);
-	signal temp3_dbg : STD_LOGIC_VECTOR (31 downto 0);
-	signal temp4_dbg : STD_LOGIC_VECTOR (31 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -82,19 +70,13 @@ BEGIN
           start => start,
           output_ready => output_ready,
 			 Z_dbg => Z_dbg,
-			 operands_valid_dbg => operands_valid_dbg,
-			 divider_busy_dbg => divider_busy_dbg,
 			 Y_buf_dbg => Y_buf_dbg,
 			 X_buf_dbg => X_buf_dbg,
 			 px_dbg => px_dbg,
 			 py_dbg => py_dbg,
 			 mu1_dbg => mu1_dbg,
 			 mu2_dbg => mu2_dbg,
-			 delta_dbg => delta_dbg,
-			 temp1_dbg => temp1_dbg,
-			 temp2_dbg => temp2_dbg,
-			 temp3_dbg => temp3_dbg,
-			 temp4_dbg => temp4_dbg
+			 delta_dbg => delta_dbg
         );
 
    -- Clock process definitions
@@ -115,12 +97,12 @@ BEGIN
       --wait for clk_period*2;
 
       --test1 
-		Y <= X"7B818935";
-		X <= X"0001F31D";
-		start <= '1';
-		wait for clk_period;
-		start <= '0';
-		wait for clk_period;
+--		Y <= X"7B818935";
+--		X <= X"0001F31D";
+--		start <= '1';
+--		wait for clk_period;
+--		start <= '0';
+--		wait for clk_period;
 		
 		--test2
 --		Y <= X"142E4ECE";
@@ -139,11 +121,11 @@ BEGIN
 --		wait for clk_period;
 
 		--test4
---		Y <= X"73F12C81";
---		X <= X"0001F31D";
---		start <= '1';
---		wait for clk_period;
---		start <= '0';
+		Y <= X"73F12C81";
+		X <= X"0001F31D";
+		start <= '1';
+		wait for clk_period;
+		start <= '0';
 
       wait;
    end process;
