@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-24T21:55:13</DateModified>
-  <ModuleName>divider_test</ModuleName>
-  <SummaryTimeStamp>2016-05-24T21:30:05</SummaryTimeStamp>
+  <DateModified>2016-06-14T22:40:59</DateModified>
+  <ModuleName>divider</ModuleName>
+  <SummaryTimeStamp>2016-06-14T22:39:09</SummaryTimeStamp>
   <SavedFilePath>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/iseconfig/divider.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG\</ImplementationReportsDirectory>
   <DateInitialized>2016-05-24T21:29:55</DateInitialized>

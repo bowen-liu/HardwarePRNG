@@ -4,49 +4,49 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity divider_test is
+entity divider is
 
 	generic(width : integer := 32);
 	
-   Port ( Y : in  STD_LOGIC_VECTOR (31 downto 0);
-          X : in  STD_LOGIC_VECTOR (31 downto 0);
-          R : out  STD_LOGIC_VECTOR (31 downto 0);
-          Q : out  STD_LOGIC_VECTOR (31 downto 0);
+   Port ( Y : in  STD_LOGIC_VECTOR (width-1 downto 0);
+          X : in  STD_LOGIC_VECTOR (width-1 downto 0);
+          R : out  STD_LOGIC_VECTOR (width-1 downto 0);
+          Q : out  STD_LOGIC_VECTOR (width-1 downto 0);
           clk : in  STD_LOGIC;
 			 rst : in  STD_LOGIC;
           start : in  STD_LOGIC;
           output_ready : out  STD_LOGIC;
 			
 			--Debug signals
-			Y_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			X_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			Z_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			px_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			py_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			mu1_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			mu2_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
-			delta_dbg : OUT STD_LOGIC_VECTOR (31 downto 0)
+			Y_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			X_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			Z_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			px_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			py_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			mu1_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			mu2_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+			delta_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0)
            );
-end divider_test;
+end divider;
 
-architecture Behavioral of divider_test is
+architecture Behavioral of divider is
 	
 	--Primary registers that holds the operands and accumulates the results during each iteration
-	signal Y_buffer : STD_LOGIC_VECTOR (31 downto 0);
-	signal X_buffer : STD_LOGIC_VECTOR (31 downto 0);
-	signal Z : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+	signal Y_buffer : STD_LOGIC_VECTOR (width-1 downto 0);
+	signal X_buffer : STD_LOGIC_VECTOR (width-1 downto 0);
+	signal Z : STD_LOGIC_VECTOR (width-1 downto 0) := (others => '0');
 	
 	--Secondary registers holding independant function results needed by iteration
 	signal px, py : Integer;
 	signal mu_phase1 : Integer;
 	signal mu_phase2 : Integer;
 	signal delta_pos : integer;
-	signal delta : STD_LOGIC_VECTOR (31 downto 0);
+	signal delta : STD_LOGIC_VECTOR (width-1 downto 0);
 	
 	--Given a STL input X, find the most significant bit of X that's 1.
 	function findMS1(X : in  STD_LOGIC_VECTOR) return Integer is
 	begin
-			for i in 31 downto 0 loop
+			for i in width-1 downto 0 loop
 				if (X(i) = '1') then
 					return i;
 				end if;
@@ -58,10 +58,10 @@ architecture Behavioral of divider_test is
 	
 	--Given a STL input X, find the most significant bit of X that's 0.
 	function findMS0(X : in  STD_LOGIC_VECTOR) return Integer is
-		variable negated_x : STD_LOGIC_VECTOR (31 downto 0);
+		variable negated_x : STD_LOGIC_VECTOR (width-1 downto 0);
 	begin
 			negated_x := not X;
-			for i in 31 downto 0 loop
+			for i in width-1 downto 0 loop
 				if (negated_x(i) = '1') then
 					return i;
 				end if;
@@ -130,7 +130,7 @@ begin
 	--Since Delta depends on py and px, the process is asynchronous and updates the value whenever py or px changes.
 	process(py,px)
 		variable bit_pos : integer;
-		variable delta_temp : std_logic_vector(31 downto 0);
+		variable delta_temp : std_logic_vector(width-1 downto 0);
 	begin
 		bit_pos := py - px;
 		
