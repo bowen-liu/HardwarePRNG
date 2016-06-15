@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -121,8 +121,9 @@ Analyzing hierarchy for entity <divider_test> in library <work> (architecture <b
 =========================================================================
 Analyzing generic Entity <divider_test> in library <work> (Architecture <behavioral>).
 	width = 32
-INFO:Xst:1749 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 82: report: negate_multiply: ERR MU IS NOT -1 OR 1
-INFO:Xst:1749 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 82: report: negate_multiply: ERR MU IS NOT -1 OR 1
+INFO:Xst:1749 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 87: report: mu_multiply: ERR MU IS NOT -1 OR 1
+INFO:Xst:1749 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 87: report: mu_multiply: ERR MU IS NOT -1 OR 1
+INFO:Xst:1749 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 87: report: mu_multiply: ERR MU IS NOT -1 OR 1
 Entity <divider_test> analyzed. Unit <divider_test> generated.
 
 
@@ -135,34 +136,33 @@ Performing bidirectional port resolution...
 Synthesizing Unit <divider_test>.
     Related source file is "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd".
 WARNING:Xst:737 - Found 32-bit latch for signal <delta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:643 - "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divide_2.vhd" line 199: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:737 - Found 6-bit latch for signal <delta_pos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 32-bit register for signal <R>.
     Found 32-bit register for signal <Q>.
     Found 1-bit register for signal <output_ready>.
-    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 132.
-    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 132.
-    Found 6-bit subtractor for signal <delta_temp_9$sub0000> created at line 129.
+    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 138.
+    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 138.
+    Found 6-bit subtractor for signal <delta_pos$sub0000> created at line 135.
     Found 2-bit register for signal <mu_phase1>.
     Found 2-bit register for signal <mu_phase2>.
-    Found 32-bit comparator greatequal for signal <mu_phase2$cmp_ge0000> created at line 155.
+    Found 32-bit comparator greatequal for signal <mu_phase2$cmp_ge0000> created at line 162.
     Found 5-bit register for signal <py>.
-    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 106.
-    Found 32-bit comparator less for signal <py$cmp_lt0000> created at line 105.
-    Found 32-bit adder for signal <tempi1$addsub0000> created at line 78.
-    Found 32-bit adder for signal <tempi1$addsub0001> created at line 78.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 111.
+    Found 32-bit comparator less for signal <py$cmp_lt0000> created at line 110.
+    Found 32-bit adder for signal <tempi1$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi2$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi3$addsub0000> created at line 81.
     Found 32-bit register for signal <X_buffer>.
     Found 32-bit register for signal <Y_buffer>.
     Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
-    Found 32x32-bit multiplier for signal <Y_buffer$mult0001> created at line 199.
     Found 32-bit register for signal <Z>.
     Found 32-bit adder for signal <Z$addsub0000>.
-    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 209.
-    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 191.
-    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 209.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 216.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 198.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 216.
     Summary:
 	inferred 170 D-type flip-flop(s).
-	inferred   5 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
 	inferred   8 Comparator(s).
 Unit <divider_test> synthesized.
 
@@ -172,10 +172,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 5
- 32-bit adder                                          : 3
+# Adders/Subtractors                                   : 6
+ 32-bit adder                                          : 4
  32-bit subtractor                                     : 1
  6-bit subtractor                                      : 1
 # Registers                                            : 9
@@ -183,8 +181,9 @@ Macro Statistics
  2-bit register                                        : 2
  32-bit register                                       : 5
  5-bit register                                        : 1
-# Latches                                              : 1
+# Latches                                              : 2
  32-bit latch                                          : 1
+ 6-bit latch                                           : 1
 # Comparators                                          : 8
  32-bit comparator greatequal                          : 2
  32-bit comparator greater                             : 1
@@ -212,17 +211,16 @@ Unit <divider_test> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 4
- 32-bit adder                                          : 3
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 4
  6-bit subtractor                                      : 1
 # Accumulators                                         : 1
  32-bit down loadable accumulator                      : 1
 # Registers                                            : 138
  Flip-Flops                                            : 138
-# Latches                                              : 1
+# Latches                                              : 2
  32-bit latch                                          : 1
+ 6-bit latch                                           : 1
 # Comparators                                          : 8
  32-bit comparator greatequal                          : 2
  32-bit comparator greater                             : 1
@@ -240,14 +238,12 @@ WARNING:Xst:1710 - FF/Latch <mu_phase1_0> (without init value) has a constant va
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider_test>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <31> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <0> 
 WARNING:Xst:1710 - FF/Latch <31> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <Mmult_Y_buffer_mult0001_submult_11> of sequential type is unconnected in block <divider_test>.
 
 Optimizing unit <divider_test> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block divider_test, actual ratio is 4.
-FlipFlop mu_phase1_1 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block divider_test, actual ratio is 6.
 Latch delta_30 has been replicated 1 time(s) to handle iob=true attribute.
 Latch delta_29 has been replicated 1 time(s) to handle iob=true attribute.
 Latch delta_28 has been replicated 1 time(s) to handle iob=true attribute.
@@ -317,8 +313,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 202
- Flip-Flops                                            : 202
+# Registers                                            : 200
+ Flip-Flops                                            : 200
 
 =========================================================================
 
@@ -347,33 +343,34 @@ Design Statistics
 # IOs                              : 388
 
 Cell Usage :
-# BELS                             : 943
+# BELS                             : 1329
 #      GND                         : 1
-#      INV                         : 65
+#      INV                         : 67
 #      LUT1                        : 1
-#      LUT2                        : 172
-#      LUT3                        : 104
-#      LUT3_D                      : 1
-#      LUT3_L                      : 1
-#      LUT4                        : 203
-#      LUT4_L                      : 31
-#      MUXCY                       : 197
-#      MUXF5                       : 3
+#      LUT2                        : 163
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 175
+#      LUT3_D                      : 18
+#      LUT3_L                      : 6
+#      LUT4                        : 410
+#      LUT4_D                      : 26
+#      LUT4_L                      : 63
+#      MUXCY                       : 200
+#      MUXF5                       : 30
 #      VCC                         : 1
-#      XORCY                       : 163
-# FlipFlops/Latches                : 262
+#      XORCY                       : 165
+# FlipFlops/Latches                : 266
 #      FD_1                        : 5
 #      FDCE                        : 193
-#      FDS_1                       : 4
-#      LDE                         : 60
+#      FDS_1                       : 2
+#      LDE                         : 66
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 387
 #      IBUF                        : 66
 #      OBUF                        : 321
-# MULTs                            : 3
-#      MULT18X18SIO                : 3
 =========================================================================
 
 Device utilization summary:
@@ -381,13 +378,12 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-5 
 
- Number of Slices:                      306  out of   8672     3%  
- Number of Slice Flip Flops:            200  out of  17344     1%  
- Number of 4 input LUTs:                578  out of  17344     3%  
+ Number of Slices:                      496  out of   8672     5%  
+ Number of Slice Flip Flops:            204  out of  17344     1%  
+ Number of 4 input LUTs:                932  out of  17344     5%  
  Number of IOs:                         388
  Number of bonded IOBs:                 388  out of    250   155% (*) 
     IOB Flip Flops:                      62
- Number of MULT18X18SIOs:                 3  out of     28    10%  
  Number of GCLKs:                         2  out of     24     8%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -413,8 +409,8 @@ Clock Information:
 --------------------------------------+------------------------+-------+
 Clock Signal                          | Clock buffer(FF name)  | Load  |
 --------------------------------------+------------------------+-------+
-clk                                   | BUFGP                  | 202   |
-delta_cmp_gt00001(delta_cmp_gt00001:O)| BUFG(*)(delta_1)       | 60    |
+clk                                   | BUFGP                  | 200   |
+delta_cmp_gt00001(delta_cmp_gt00001:O)| BUFG(*)(delta_pos_0)   | 66    |
 --------------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -432,9 +428,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 28.018ns (Maximum Frequency: 35.692MHz)
+   Minimum period: 21.978ns (Maximum Frequency: 45.500MHz)
    Minimum input arrival time before clock: 6.968ns
-   Maximum output required time after clock: 13.352ns
+   Maximum output required time after clock: 10.538ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -443,50 +439,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 28.018ns (frequency: 35.692MHz)
-  Total number of paths / destination ports: 460502 / 266
+  Clock period: 21.978ns (frequency: 45.500MHz)
+  Total number of paths / destination ports: 680119 / 264
 -------------------------------------------------------------------------
-Delay:               14.009ns (Levels of Logic = 22)
-  Source:            mu_phase1_1_1 (FF)
-  Destination:       Y_buffer_31 (FF)
-  Source Clock:      clk falling
-  Destination Clock: clk rising
+Delay:               10.989ns (Levels of Logic = 11)
+  Source:            Y_buffer_3 (FF)
+  Destination:       py_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
 
-  Data Path: mu_phase1_1_1 to Y_buffer_31
+  Data Path: Y_buffer_3 to py_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS_1:C->Q           16   0.514   0.909  mu_phase1_1_1 (mu_phase1_1_1)
-     LUT3:I2->O            3   0.612   0.451  tempi1_mux0000<9>1 (tempi1_mux0000<9>)
-     MULT18X18SIO:A9->P17    1   4.331   0.426  Mmult_Y_buffer_mult0001_submult_0 (Mmult_Y_buffer_mult0001_submult_0_P_to_Adder_A_17)
-     LUT2:I1->O            1   0.612   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_lut<17> (Mmult_Y_buffer_mult0001_submult_00_Madd_lut<17>)
-     MUXCY:S->O            1   0.404   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<17> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<17>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<18> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<18>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<19> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<19>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<20> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<20>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<21> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<21>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<22> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<22>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<23> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<23>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<24> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<24>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<25> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<25>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<26> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<26>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<27> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<27>)
-     MUXCY:CI->O           1   0.051   0.000  Mmult_Y_buffer_mult0001_submult_00_Madd_cy<28> (Mmult_Y_buffer_mult0001_submult_00_Madd_cy<28>)
-     XORCY:CI->O           1   0.699   0.426  Mmult_Y_buffer_mult0001_submult_00_Madd_xor<29> (Mmult_Y_buffer_mult0001_submult_0_29)
-     LUT2:I1->O            1   0.612   0.000  Mmult_Y_buffer_mult00010_Madd_lut<29> (Mmult_Y_buffer_mult00010_Madd_lut<29>)
-     MUXCY:S->O            1   0.404   0.000  Mmult_Y_buffer_mult00010_Madd_cy<29> (Mmult_Y_buffer_mult00010_Madd_cy<29>)
-     XORCY:CI->O           1   0.699   0.360  Mmult_Y_buffer_mult00010_Madd_xor<30> (Y_buffer_mult0001<30>)
-     LUT4:I3->O            1   0.612   0.000  Maccum_Y_buffer_lut<30> (Maccum_Y_buffer_lut<30>)
-     MUXCY:S->O            0   0.404   0.000  Maccum_Y_buffer_cy<30> (Maccum_Y_buffer_cy<30>)
-     XORCY:CI->O           1   0.699   0.000  Maccum_Y_buffer_xor<31> (Result<31>)
-     FDCE:D                    0.268          Y_buffer_31
+     FDCE:C->Q             9   0.514   0.849  Y_buffer_3 (Y_buffer_3)
+     LUT4_L:I0->LO         1   0.612   0.103  py_mux0004<3>117 (py_mux0004<3>117)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>139_SW1 (N312)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>139 (py_mux0004<3>139)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0004<3>184_SW0 (N288)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>184 (py_mux0004<3>184)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>1121_SW1 (N314)
+     LUT4_L:I3->LO         1   0.612   0.130  py_mux0004<3>1121 (py_mux0004<3>1121)
+     LUT3:I2->O            1   0.612   0.360  py_mux0004<3>1172_SW0 (N3101)
+     LUT4:I3->O            1   0.612   0.387  py_mux0004<3>1172 (py_mux0004<3>1172)
+     LUT3_L:I2->LO         1   0.612   0.103  py_mux0004<3>1392_SW0 (N300)
+     LUT4:I3->O            1   0.612   0.000  py_mux0004<3>1392 (py_mux0004<3>)
+     FD_1:D                    0.268          py_1
     ----------------------------------------
-    Total                     14.009ns (11.437ns logic, 2.572ns route)
-                                       (81.6% logic, 18.4% route)
+    Total                     10.989ns (7.514ns logic, 3.475ns route)
+                                       (68.4% logic, 31.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 2362 / 386
+  Total number of paths / destination ports: 2056 / 386
 -------------------------------------------------------------------------
 Offset:              6.968ns (Levels of Logic = 35)
   Source:            start (PAD)
@@ -497,9 +482,9 @@ Offset:              6.968ns (Levels of Logic = 35)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           211   1.106   1.273  start_IBUF (Y_buffer_eqn)
-     LUT2:I0->O            2   0.612   0.449  Eqn_01 (Eqn_0)
-     LUT3:I1->O            1   0.612   0.000  Maccum_Y_buffer_lut<0> (Maccum_Y_buffer_lut<0>)
+     IBUF:I->O           204   1.106   1.119  start_IBUF (Y_buffer_eqn)
+     INV:I->O              3   0.612   0.603  Y_buffer_eqn_inv2_INV_0 (Y_buffer_eqn_inv)
+     LUT3:I0->O            1   0.612   0.000  Maccum_Y_buffer_lut<0> (Maccum_Y_buffer_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Maccum_Y_buffer_cy<0> (Maccum_Y_buffer_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<1> (Maccum_Y_buffer_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<2> (Maccum_Y_buffer_cy<2>)
@@ -539,32 +524,28 @@ Offset:              6.968ns (Levels of Logic = 35)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 357 / 233
+  Total number of paths / destination ports: 378 / 233
 -------------------------------------------------------------------------
-Offset:              13.352ns (Levels of Logic = 11)
-  Source:            X_buffer_2 (FF)
-  Destination:       px_dbg<1> (PAD)
+Offset:              10.538ns (Levels of Logic = 7)
+  Source:            X_buffer_1 (FF)
+  Destination:       px_dbg<0> (PAD)
   Source Clock:      clk rising
 
-  Data Path: X_buffer_2 to px_dbg<1>
+  Data Path: X_buffer_1 to px_dbg<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.514   0.721  X_buffer_2 (X_buffer_2)
-     LUT4_L:I0->LO         1   0.612   0.103  px<1>15 (px<1>15)
-     LUT4:I3->O            1   0.612   0.426  px<1>37_SW0 (N109)
-     LUT4_L:I1->LO         1   0.612   0.130  px<1>37 (px<1>37)
-     LUT4:I2->O            1   0.612   0.360  px<1>82_SW0 (N111)
-     LUT4_L:I3->LO         1   0.612   0.103  px<1>82 (px<1>82)
-     LUT4:I3->O            1   0.612   0.426  px<1>119_SW0 (N1131)
-     LUT4_L:I1->LO         1   0.612   0.130  px<1>119 (px<1>119)
-     LUT4:I2->O            1   0.612   0.360  px<1>160_SW0 (N1151)
-     LUT4:I3->O            2   0.612   0.410  px<1>160 (px<1>160)
-     LUT3:I2->O            2   0.612   0.380  px<1>169 (px_dbg_1_OBUF)
-     OBUF:I->O                 3.169          px_dbg_1_OBUF (px_dbg<1>)
+     FDCE:C->Q            11   0.514   0.945  X_buffer_1 (X_buffer_1)
+     LUT4_L:I0->LO         1   0.612   0.252  px<0>11 (px<0>11)
+     LUT4:I0->O            1   0.612   0.387  px<0>30 (px<0>30)
+     LUT4:I2->O            1   0.612   0.387  px<0>111 (px<0>111)
+     LUT4_L:I2->LO         1   0.612   0.252  px<0>213 (px<0>213)
+     LUT4:I0->O            1   0.612   0.509  px<0>315 (px<0>315)
+     LUT4:I0->O            3   0.612   0.451  px<0>417 (px_dbg_0_OBUF)
+     OBUF:I->O                 3.169          px_dbg_0_OBUF (px_dbg<0>)
     ----------------------------------------
-    Total                     13.352ns (9.803ns logic, 3.549ns route)
-                                       (73.4% logic, 26.6% route)
+    Total                     10.538ns (7.355ns logic, 3.183ns route)
+                                       (69.8% logic, 30.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'delta_cmp_gt00001'
@@ -588,14 +569,14 @@ Offset:              4.114ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.92 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.31 secs
  
 --> 
 
-Total memory usage is 328248 kilobytes
+Total memory usage is 344444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

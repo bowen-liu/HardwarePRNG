@@ -16,4 +16,4 @@ Time Resolution for simulation is 1ps.
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/divider_test2tb_isim_beh.exe
 Fuse Memory Usage: 35348 KB
-Fuse CPU Usage: 530 ms
+Fuse CPU Usage: 577 ms

@@ -40,6 +40,7 @@ architecture Behavioral of divider_test is
 	signal px, py : Integer;
 	signal mu_phase1 : Integer;
 	signal mu_phase2 : Integer;
+	signal delta_pos : integer;
 	signal delta : STD_LOGIC_VECTOR (31 downto 0);
 	
 	--Given a STL input X, find the most significant bit of X that's 1.
@@ -71,18 +72,22 @@ architecture Behavioral of divider_test is
 	end function findMS0;
 	
 	--Turn X into a negative number if MU is -1. X remains positive if MU is 1 or anything else.
-	function negate_multiply(X: in integer; mu: in integer) return Integer is
+	--Since multiplying any integer X by MU will either result in -X or X, this function will replace a multiplication op.
+	function mu_multiply(X: in integer; mu: in integer) return Integer is
 	begin
 		case mu is
+			--If MU = -1, X's signs are switched
 			when -1 => 
 				return 0 - X;
+			--If MU = 1, X is unchanged
 			when 1 => 
 				return X;
-			when others => 	--shouldn't happen
-				report "negate_multiply: ERR MU IS NOT -1 OR 1";
+			--MU is an unexpected value, X remains unchanged
+			when others => 	
+				report "mu_multiply: ERR MU IS NOT -1 OR 1";
 				return X;
 		end case;
-	end function negate_multiply;
+	end function mu_multiply;
 	
 begin
 
@@ -120,7 +125,8 @@ begin
 		px <= findMS1(X_buffer);	
 	end process;
 	
-	--Generates Delta.
+	--Generates Delta. Note that the value for Delta has one bit set to 1 at any given time, where the rest are 0s.
+	--In this implementation, both the value of delta AND the 1's bit position of delta is returned
 	--Since Delta depends on py and px, the process is asynchronous and updates the value whenever py or px changes.
 	process(py,px)
 		variable bit_pos : integer;
@@ -128,11 +134,12 @@ begin
 	begin
 		bit_pos := py - px;
 		
-		--Only calculate the new delta value if bit_pos is in a valid range
+		--Only return the new delta value (and the bit position that's 1) if bit_pos is in a valid range
 		if(bit_pos > 0 and bit_pos < width-1) then
 			delta_temp := (others => '0');
 			delta_temp(bit_pos) := '1';
 			delta <= delta_temp;
+			delta_pos <= bit_pos;
 		end if;
 	end process;
 	
@@ -187,19 +194,20 @@ begin
 				--Reset all registers
 				Z <= (others => '0');
 				Q <= (others => '0');
-				R <= (others => '0');
+				R <= (others => '0'); 
 				output_ready <= '0';
 				
 			--Run one iteration of Algorithm Phase 1
 			elsif (py > px) then
 				
-				--Calculate Y value for this iteration
-				tempi1 := negate_multiply(to_integer(signed(delta)), mu_phase1);
-				tempi2 := to_integer(signed(Y_buffer)) - tempi1 * to_integer(signed(X_buffer));
+				--Calculate Y value for this iteration. Y = Y - mu * delta * X.
+				--We can use logical shift left to accomplish the multiplication of delta and X, since delta is always a power of 2.
+				tempi1 := to_integer(signed(X_buffer) sll delta_pos);
+				tempi2 := to_integer(signed(Y_buffer)) - mu_multiply(tempi1, mu_phase1);	
 				Y_buffer <= std_logic_vector(to_signed(tempi2,Y_buffer'length));
 				
-				--Calculate Z value for this iteration
-				tempi3 := to_integer(signed(Z)) + tempi1;
+				--Calculate Z value for this iteration. Z = Z + delta * mu
+				tempi3 := to_integer(signed(Z)) + mu_multiply(to_integer(signed(delta)), mu_phase1);	
 				Z <= std_logic_vector(to_signed(tempi3,Z'length));
 				
 			--Run one iteration of Algorithm Phase 2
@@ -207,14 +215,13 @@ begin
 				--Does quotient and remainder needs adjustments?
 				if(not(signed(Y_buffer) >= 0 and signed(Y_buffer) < signed(X_buffer))) then
 					
-					--Calculate Y value for this iteration
-					tempi1 := negate_multiply(to_integer(signed(X_buffer)), mu_phase2);
-					tempi2 := to_integer(signed(Y_buffer)) - 	tempi1;
-					Y_buffer <= std_logic_vector(to_signed(tempi2,Y_buffer'length));
+					--Calculate Y value for this iteration. Y = Y - X * mu_2
+					tempi1 := to_integer(signed(Y_buffer)) - mu_multiply(to_integer(signed(X_buffer)), mu_phase2);	
+					Y_buffer <= std_logic_vector(to_signed(tempi1,Y_buffer'length));
 					
-					--Calculate Z value for this iteration
-					tempi3 := to_integer(signed(Z)) + mu_phase2;
-					Z <= std_logic_vector(to_signed(tempi3,Z'length));
+					--Calculate Z value for this iteration. Z = Z + mu_2
+					tempi2 := to_integer(signed(Z)) + mu_phase2;				
+					Z <= std_logic_vector(to_signed(tempi2,Z'length));
 					
 				end if;
 				
