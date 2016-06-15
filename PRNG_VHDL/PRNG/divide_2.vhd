@@ -16,7 +16,8 @@ entity divider_test is
 			 rst : in  STD_LOGIC;
           start : in  STD_LOGIC;
           output_ready : out  STD_LOGIC;
-			  
+			
+			--Debug signals
 			Y_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			X_buf_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
 			Z_dbg : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -30,12 +31,12 @@ end divider_test;
 
 architecture Behavioral of divider_test is
 	
+	--Primary registers that holds the operands and accumulates the results during each iteration
 	signal Y_buffer : STD_LOGIC_VECTOR (31 downto 0);
 	signal X_buffer : STD_LOGIC_VECTOR (31 downto 0);
-	
-	signal operands_valid : STD_LOGIC := '0';
-	
 	signal Z : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+	
+	--Secondary registers holding independant function results needed by iteration
 	signal px, py : Integer;
 	signal mu_phase1 : Integer;
 	signal mu_phase2 : Integer;
@@ -68,6 +69,20 @@ architecture Behavioral of divider_test is
 			--Return 0 if X = -1
 			return 0;		
 	end function findMS0;
+	
+	--Turn X into a negative number if MU is -1. X remains positive if MU is 1 or anything else.
+	function negate_multiply(X: in integer; mu: in integer) return Integer is
+	begin
+		case mu is
+			when -1 => 
+				return 0 - X;
+			when 1 => 
+				return X;
+			when others => 	--shouldn't happen
+				report "negate_multiply: ERR MU IS NOT -1 OR 1";
+				return X;
+		end case;
+	end function negate_multiply;
 	
 begin
 
@@ -147,7 +162,7 @@ begin
 	
 	--Main Division algorithm and controls
 	process(clk, rst)
-		variable temp1, temp2, temp3, temp4 : signed(31 downto 0);
+		--variable temp1, temp2, temp3, temp4 : signed(31 downto 0);
 		variable tempi1, tempi2, tempi3 : integer;
 	begin
 		
@@ -177,8 +192,9 @@ begin
 				
 			--Run one iteration of Algorithm Phase 1
 			elsif (py > px) then
+				
 				--Calculate Y value for this iteration
-				tempi1 := to_integer(to_signed(mu_phase1,Y_buffer'length)) * to_integer(signed(delta));
+				tempi1 := negate_multiply(to_integer(signed(delta)), mu_phase1);
 				tempi2 := to_integer(signed(Y_buffer)) - tempi1 * to_integer(signed(X_buffer));
 				Y_buffer <= std_logic_vector(to_signed(tempi2,Y_buffer'length));
 				
@@ -192,12 +208,13 @@ begin
 				if(not(signed(Y_buffer) >= 0 and signed(Y_buffer) < signed(X_buffer))) then
 					
 					--Calculate Y value for this iteration
-					tempi1 := to_integer(signed(Y_buffer)) - mu_phase2 * to_integer(signed(X_buffer));
-					Y_buffer <= std_logic_vector(to_signed(tempi1,Y_buffer'length));
+					tempi1 := negate_multiply(to_integer(signed(X_buffer)), mu_phase2);
+					tempi2 := to_integer(signed(Y_buffer)) - 	tempi1;
+					Y_buffer <= std_logic_vector(to_signed(tempi2,Y_buffer'length));
 					
 					--Calculate Z value for this iteration
-					tempi2 := to_integer(signed(Z)) + mu_phase2;
-					Z <= std_logic_vector(to_signed(tempi2,Z'length));
+					tempi3 := to_integer(signed(Z)) + mu_phase2;
+					Z <= std_logic_vector(to_signed(tempi3,Z'length));
 					
 				end if;
 				
