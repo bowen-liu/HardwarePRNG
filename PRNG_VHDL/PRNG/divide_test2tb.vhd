@@ -116,12 +116,14 @@ BEGIN
 --		wait for clk_period;
 		
 		--test3
---		Y <= X"68493A1B";
---		X <= X"0001F31D";
---		start <= '1';
---		wait for clk_period;
---		start <= '0';
---		wait for clk_period;
+		Y <= X"68493A1B";
+		X <= X"0001F31D";
+		start <= '1';
+		wait for clk_period;
+		start <= '0';
+		wait for clk_period;
+		wait until output_ready = '1';
+		wait for clk_period;
 
 		--test4
 		Y <= X"73F12C81";

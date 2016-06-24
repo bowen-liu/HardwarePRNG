@@ -13,19 +13,19 @@ entity divider is
           R : out  STD_LOGIC_VECTOR (width-1 downto 0);
           Q : out  STD_LOGIC_VECTOR (width-1 downto 0);
           clk : in  STD_LOGIC;
-			 rst : in  STD_LOGIC;
+          rst : in  STD_LOGIC;
           start : in  STD_LOGIC;
           output_ready : out  STD_LOGIC;
 			
 			--Debug signals
-			Y_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			X_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			Z_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			px_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			py_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			mu1_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			mu2_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
-			delta_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0)
+          Y_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          X_buf_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          Z_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          px_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          py_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          mu1_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          mu2_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0);
+          delta_dbg : OUT STD_LOGIC_VECTOR (width-1 downto 0)
            );
 end divider;
 
@@ -84,7 +84,7 @@ architecture Behavioral of divider is
 				return X;
 			--MU is an unexpected value, X remains unchanged
 			when others => 	
-				report "mu_multiply: ERR MU IS NOT -1 OR 1";
+				--report "mu_multiply: ERR MU IS NOT -1 OR 1";
 				return X;
 		end case;
 	end function mu_multiply;
@@ -102,7 +102,7 @@ begin
 	delta_dbg <= delta;
 	
 	
-	--Generates values for PY and Delta on the falling edge
+	--Generates values for PY on the falling edge
 	process(clk)
 	begin
 		if(clk = '0' and clk'event) then
@@ -118,8 +118,8 @@ begin
 		end if;
 	end process;
 	
-	--Generates alues for PX. 
-	--Since the X is only changed once per division, and PX is only needed PX is updated asynchronously.
+	--Generates values for PX. 
+	--Since the X is unchanged throughout a division cycle, PX is updated asynchronously when X changes.
 	process(X_buffer)
 	begin
 		px <= findMS1(X_buffer);	
@@ -222,14 +222,12 @@ begin
 					--Calculate Z value for this iteration. Z = Z + mu_2
 					tempi2 := to_integer(signed(Z)) + mu_phase2;				
 					Z <= std_logic_vector(to_signed(tempi2,Z'length));
-					
-				end if;
-				
-				--Output the results
-				R <= Y_buffer;
-				Q <= Z;
-				output_ready <= '1';
-				
+				else
+					--Output the results
+					R <= Y_buffer;
+					Q <= Z;
+					output_ready <= '1';	
+				end if;	
 			end if;
 		end if;
 	end process;
