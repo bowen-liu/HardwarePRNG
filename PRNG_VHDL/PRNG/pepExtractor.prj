@@ -1,1 +1,4 @@
-work	"mod_multiplier.vhd"
+work	"PRNG_CONST.vhd"
+work	"control_fsm.vhd"
+work	"divide_2.vhd"
+work	"multiplication_stage.vhd"
