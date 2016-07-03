@@ -7,15 +7,17 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/UA_TX - Behavioral C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|UA_TX|UA_TX.vhd</ClosedNode>
+         <ClosedNode>/prng_toplevel - Behavioral C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|prng_toplevel.vhd/UART - UA_TX - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>multiplication_stage - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/multiplication_stage.vhd)</SelectedItem>
+         <SelectedItem>prng_toplevel - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/prng_toplevel.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ca000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ca0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>multiplication_stage - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/multiplication_stage.vhd)</CurrentItem>
+      <CurrentItem>prng_toplevel - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/prng_toplevel.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -26,13 +28,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -61,16 +63,19 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/UA_TX - Behavioral C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|UA_TX|UA_TX.vhd</ClosedNode>
          <ClosedNode>/divider_tb - behavior C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|divider_tb.vhd</ClosedNode>
+         <ClosedNode>/prng_toplevel - Behavioral C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|prng_toplevel.vhd/PRNG - control_fsm - Behavioral</ClosedNode>
+         <ClosedNode>/prng_toplevel - Behavioral C:|Users|OWner|Documents|ceng441|UvicSummer2016Ceng441|PRNG_VHDL|PRNG|prng_toplevel.vhd/UART - UA_TX - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>multiplication_stage - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/multiplication_stage.vhd)</SelectedItem>
+         <SelectedItem>control_fsm_tb - behavior (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/control_fsm_tb.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ca000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ca0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>multiplication_stage - Behavioral (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/multiplication_stage.vhd)</CurrentItem>
+      <CurrentItem>control_fsm_tb - behavior (C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/control_fsm_tb.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -78,42 +83,42 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Behavioral Check Syntax</SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Behavioral Check Syntax</CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
       <ClosedNodes>

@@ -26,7 +26,7 @@ end control_fsm;
 architecture Behavioral of control_fsm is
 
 	--Other VHDL componments needed for the overall FSM
-	component divider 
+	component divider is
 	port ( Y : in  STD_LOGIC_VECTOR (width-1 downto 0);
           X : in  STD_LOGIC_VECTOR (width-1 downto 0);
           R : out  STD_LOGIC_VECTOR (width-1 downto 0);
@@ -37,7 +37,7 @@ architecture Behavioral of control_fsm is
           output_ready : out  STD_LOGIC);
 	end component;
 	
-	component multiplication_stage
+	component multiplication_stage is
     Port ( Y : in  STD_LOGIC_VECTOR (width-1 downto 0);
            Z : in  STD_LOGIC_VECTOR (width-1 downto 0);
            output : out  STD_LOGIC_VECTOR (width-1 downto 0));
@@ -57,8 +57,8 @@ architecture Behavioral of control_fsm is
 begin
 	
 	--Instantiating the datapath divider 
-	DIV : divider PORT MAP 
-		(Y => s0, 
+	DIV : divider PORT MAP (
+		Y => s0, 
 		X => STD_LOGIC_VECTOR(to_signed(CONST_Q, width)), 
 		R => Y_out, 
 		Q => Z_out, 
@@ -68,8 +68,8 @@ begin
 		output_ready => div_complete);
 	
 	--Instantiating the datapath multiplier and subtractor 
-	MUL : multiplication_stage PORT MAP 
-		(Y => Y_out,							
+	MUL : multiplication_stage PORT MAP (
+		Y => Y_out,							
 		Z => Z_out,
 		output => mul_out);
 		
@@ -102,7 +102,9 @@ begin
 		elsif(clk = '1' and clk'event) then 
 			if(fsm_stage = 4) then
 				s0 <= mul_out;		--Store the latest seed 
-				s <= mul_out;		--Output the latest seed
+				if(UA_TX_ready = '1') then
+					s <= mul_out;		--Output the latest seed
+				end if;
 			end if;
 		end if;
 	end process;
@@ -147,10 +149,14 @@ begin
 				
 				--Write the result back as the new seed. TX stuff here?
 				when 4 =>
-					fsm_stage <= 0;
 					prng_busy <= '0';
 					prng_done <= '1';
-				
+					
+					--Only change the state back to reset if UA_TX is ready.
+					if(UA_TX_ready = '1') then
+						fsm_stage <= 0;
+					end if;
+					
 				when others =>
 					report "ERROR! INVALID STATE!";
 			end case;

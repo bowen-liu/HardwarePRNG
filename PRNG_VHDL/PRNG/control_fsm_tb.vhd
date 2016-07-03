@@ -69,6 +69,8 @@ BEGIN
    stim_proc: process
    begin		
 
+		UA_TX_ready <= '1';
+
       seed_sel <= "00";
 		reset <= '1';
 		wait for clk_period;
@@ -105,6 +107,15 @@ BEGIN
 		reset <= '0';
       wait for clk_period;		
 		start <= '1';
+		wait until prng_done = '1';
+		wait for clk_period*5;	
+		wait until prng_done = '1';
+		wait for clk_period*5;	
+		wait until prng_done = '1';
+		UA_TX_ready <= '0';
+		wait for clk_period*50;	
+		UA_TX_ready <= '1';	
+		wait until prng_done = '1';
 
       wait;
    end process;
