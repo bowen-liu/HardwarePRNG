@@ -55,7 +55,7 @@ architecture Behavioral of control_fsm is
 	signal fsm_stage : Integer;
 
 begin
-
+	
 	--Instantiating the datapath divider 
 	DIV : divider PORT MAP 
 		(Y => s0, 
@@ -72,19 +72,30 @@ begin
 		(Y => Y_out,							
 		Z => Z_out,
 		output => mul_out);
-	
+		
+		
 	--Sets the initial seed and seed value for every iterations (s0)
 	process(clk, reset)
 	begin
 	
-		--When reset is asynchronously asserted
+		--When reset is asynchronously asserted, load the select initial seed into s0.
 		if(reset = '1') then
 			case seed_sel is
-				when "00" => s0 <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
-				when "01" => s0 <= STD_LOGIC_VECTOR(to_signed(SEED_1, width));
-				when "10" => s0 <= STD_LOGIC_VECTOR(to_signed(SEED_2, width));
-				when "11" => s0 <= STD_LOGIC_VECTOR(to_signed(SEED_3, width));
-				when others => s0 <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+				when "00" => 
+					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+				when "01" => 
+					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_1, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+				when "10" => 
+					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_2, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+				when "11" => 
+					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_3, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+				when others => 
+					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
 			end case;	
 		
 		--When a new value has been calculated at the end of a generation cycle
@@ -104,6 +115,8 @@ begin
 		--Return to the reset state if the rst signal has been asynchronously asserted
 		if(reset = '1') then
 			fsm_stage <= 0;
+			prng_busy <= '0';
+			prng_done <= '0';
 		
 		--All iterative state changes happens on rising edges
 		elsif(clk = '1' and clk'event) then 
@@ -113,6 +126,8 @@ begin
 					if(start = '1') then
 						div_start <= '1';
 						fsm_stage <= 1;
+						prng_busy <= '1';
+						prng_done <= '0';
 					end if;
 				
 				--Turn off the divider start signal
@@ -133,6 +148,8 @@ begin
 				--Write the result back as the new seed. TX stuff here?
 				when 4 =>
 					fsm_stage <= 0;
+					prng_busy <= '0';
+					prng_done <= '1';
 				
 				when others =>
 					report "ERROR! INVALID STATE!";
@@ -140,6 +157,7 @@ begin
 					
 		end if;
 	end process;
+	
 
 end Behavioral;
 
