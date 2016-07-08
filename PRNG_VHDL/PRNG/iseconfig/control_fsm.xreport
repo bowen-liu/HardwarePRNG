@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-07-02T21:29:29</DateModified>
+  <DateModified>2016-07-07T22:06:42</DateModified>
   <ModuleName>control_fsm</ModuleName>
-  <SummaryTimeStamp>2016-07-02T20:19:11</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-07-07T22:06:30</SummaryTimeStamp>
   <SavedFilePath>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/iseconfig/control_fsm.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG\</ImplementationReportsDirectory>
-  <DateInitialized>2016-06-24T00:49:21</DateInitialized>
+  <DateInitialized>2016-07-07T21:55:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

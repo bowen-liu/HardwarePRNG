@@ -86,13 +86,13 @@ begin
 					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
 				when "01" => 
 					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_1, width));
-					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_1, width));
 				when "10" => 
 					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_2, width));
-					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_2, width));
 				when "11" => 
 					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_3, width));
-					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
+					seed <= STD_LOGIC_VECTOR(to_signed(SEED_3, width));
 				when others => 
 					s0 <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
 					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
