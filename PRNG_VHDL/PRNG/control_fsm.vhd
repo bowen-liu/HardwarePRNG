@@ -147,15 +147,19 @@ begin
 				when 3 =>
 					fsm_stage <= 4;
 				
-				--Write the result back as the new seed. TX stuff here?
+				--Write the result back as the new seed and output the seed when UART is ready
 				when 4 =>
 					prng_busy <= '0';
-					prng_done <= '1';
 					
-					--Only change the state back to reset if UA_TX is ready.
+					--Only change the state if UA_TX is ready.
 					if(UA_TX_ready = '1') then
-						fsm_stage <= 0;
+						fsm_stage <= 5;
 					end if;
+				
+				--Assert PRNG_DONE so UART will accept the seed
+				when 5 =>
+					prng_done <= '1';
+					fsm_stage <= 0;
 					
 				when others =>
 					report "ERROR! INVALID STATE!";

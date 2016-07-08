@@ -13,7 +13,11 @@ entity prng_toplevel is
            baud_sel : in  STD_LOGIC_VECTOR (2 downto 0);
 			  PRNG_busy : out  STD_LOGIC;
            UA_TX_ready : out  STD_LOGIC;
-           bit_out : out  STD_LOGIC);
+           bit_out : out  STD_LOGIC;
+			  
+			  --debug
+			  prng_seed_out : out  STD_LOGIC_VECTOR (width-1 downto 0)
+			  );
 end prng_toplevel;
 
 architecture Behavioral of prng_toplevel is
@@ -79,6 +83,9 @@ begin
 	--Output signals
 	PRNG_busy <= prng_pbusy;
 	UA_TX_ready <= UATX_rdy;
+	
+	--Debug signals
+	prng_seed_out <= prng_s;
 
 end Behavioral;
 
