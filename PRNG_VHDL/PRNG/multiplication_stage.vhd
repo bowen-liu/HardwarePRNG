@@ -26,21 +26,23 @@ begin
 		rz <= to_integer(signed(Z)) * CONST_R;
 	end process;
 	
-	--aY - rZ
+	--(aY - rZ) % M
 	process(ay, rz)
 		variable temp : SIGNED (31 downto 0);
 	begin
+	
+		--aY - rZ
 		temp := to_signed(ay-rz, output'length);
 		
-		--Add M to aY-rZ if the result is negative. Replacement for mod M?
+		--If the resulting seed is negative, add M to aY-rZ .This operation is the same as subtracting M_BAR from aY-rZ.
+		--This step essentially performs the mod operation required by the algorithm.
 		if(temp <= 0) then
 			temp := temp + to_signed(CONST_M, temp'length);
 		end if;
 		
+		--Outputs (aY - rZ) % M
 		output <= std_logic_vector(temp);
-		
 	end process;
-		
 
 end Behavioral;
 

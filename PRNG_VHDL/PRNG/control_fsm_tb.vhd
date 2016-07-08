@@ -80,6 +80,7 @@ BEGIN
 		wait for clk_period;
 		start <= '0';
 		wait until prng_done = '1';
+		wait for clk_period;
 		
 		seed_sel <= "01";
 		reset <= '1';
@@ -90,6 +91,7 @@ BEGIN
 		wait for clk_period;
 		start <= '0';
 		wait until prng_done = '1';
+		wait for clk_period;
 		
 		seed_sel <= "10";
 		reset <= '1';
@@ -100,6 +102,7 @@ BEGIN
 		wait for clk_period;
 		start <= '0';
 		wait until prng_done = '1';
+		wait for clk_period;
 		
 		seed_sel <= "11";
 		reset <= '1';
@@ -116,6 +119,7 @@ BEGIN
 		wait for clk_period*50;	
 		UA_TX_ready <= '1';	
 		wait until prng_done = '1';
+		wait for clk_period;
 
       wait;
    end process;
