@@ -78,7 +78,7 @@ BEGIN
 		s <= X"01234567";
 		seed <= X"76543210";
 		prng_done <= '0';
-		test_word_TX <= '1';
+		test_word_TX <= '0';
 		test_byte_TX <= '0';
       wait for clk_period*10;
 		

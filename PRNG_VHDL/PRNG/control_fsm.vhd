@@ -123,12 +123,18 @@ begin
 		--All iterative state changes happens on rising edges
 		elsif(clk = '1' and clk'event) then 
 			case fsm_stage is
+			
 				--In reset state. Start the divider
 				when 0 =>
 					if(start = '1') then
 						div_start <= '1';
 						fsm_stage <= 1;
 						prng_busy <= '1';
+						prng_done <= '0';
+					else
+						div_start <= '0';
+						fsm_stage <= 0;
+						prng_busy <= '0';
 						prng_done <= '0';
 					end if;
 				
@@ -141,9 +147,11 @@ begin
 				when 2 =>
 					if(div_complete = '1') then
 						fsm_stage <= 3;
+					else
+						fsm_stage <= 2;
 					end if;
 				
-				--Wait one cycle for mul and sub to complete
+				--Wait one cycle for mul, sub, and mod to complete
 				when 3 =>
 					fsm_stage <= 4;
 				
@@ -151,9 +159,11 @@ begin
 				when 4 =>
 					prng_busy <= '0';
 					
-					--Only change the state if UA_TX is ready.
+					--Only change the state if UA_TX is ready. Otherwise, we wait.
 					if(UA_TX_ready = '1') then
 						fsm_stage <= 5;
+					else
+						fsm_stage <= 4;
 					end if;
 				
 				--Assert PRNG_DONE so UART will accept the seed

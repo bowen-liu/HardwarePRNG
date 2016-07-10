@@ -80,15 +80,14 @@ BEGIN
    begin		
 	
 		baud_sel <= "010";
-		seed_sel <= "00";
+		seed_sel <= "11";
 		reset <= '1';
 		wait for clk_period;
 		reset <= '0';
       wait for clk_period;		
 		start <= '1';
 		wait for clk_period;
-		--start <= '0';
-		--wait until PRNG_busy = '0';
+		start <= '0';
 
       wait;
    end process;
