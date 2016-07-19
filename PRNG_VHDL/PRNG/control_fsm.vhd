@@ -77,7 +77,6 @@ begin
 	--Sets the initial seed and seed value for every iterations (s0)
 	process(clk, reset)
 	begin
-	
 		--When reset is asynchronously asserted, load the select initial seed into s0.
 		if(reset = '1') then
 			case seed_sel is
@@ -98,8 +97,9 @@ begin
 					seed <= STD_LOGIC_VECTOR(to_signed(SEED_0, width));
 			end case;	
 		
-		--When a new value has been calculated at the end of a generation cycle
-		elsif(clk = '0' and clk'event) then 
+		--When a new value has been calculated at the end of a generation cycle, send the seed to UATX
+		--This action has to be done on the rising edge, or else the synthesized clock rate is significantly impacted for some reason
+		elsif(clk = '1' and clk'event) then 
 			if(fsm_stage = 5) then
 				s0 <= mul_out;		--Store the latest seed 
 				if(UA_TX_ready = '1') then
@@ -158,9 +158,8 @@ begin
 				--Wait one more cycle for mul, sub, and mod to complete
 				when 4 =>
 					fsm_stage <= 5;
-					
-				--Wait one more cycle for mul, sub, and mod to complete
-				--The result is outputted to the UART at the falling edge by the other process in this file
+				
+				--The result of the mul stage is outputted to the UART at the rising edge by the other process in this file
 				when 5 =>
 					fsm_stage <= 6;
 				
