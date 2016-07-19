@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/prng_tl_tb_isim_beh.exe" -prj "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/prng_tl_tb_beh.prj" "work.prng_tl_tb" 
+-intstyle "ise" -incremental -o "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/control_fsm_tb_isim_beh.exe" -prj "C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/control_fsm_tb_beh.prj" "work.control_fsm_tb" 

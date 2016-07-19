@@ -1,0 +1,1147 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: prng_toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "prng_toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "prng_toplevel"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-fg320
+
+---- Source Options
+Top Module Name                    : prng_toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/prng_package.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_fsm.vhd" in Library work.
+Architecture behavioral of Entity debouncer_fsm is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_counter.vhd" in Library work.
+Architecture rtl of Entity debouncer_counter is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/PRNG_CONST.vhd" in Library work.
+Architecture prng_const of Entity prng_const is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd" in Library work.
+Architecture behavioral of Entity word_tx is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" in Library work.
+Architecture behavioral of Entity byte_tx is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd" in Library work.
+Architecture behavioral of Entity bit_tx is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/slow_clk.vhd" in Library work.
+Architecture slow_clk of Entity slow_clk is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer.vhd" in Library work.
+Architecture behavioral of Entity debouncer is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd" in Library work.
+Architecture behavioral of Entity divider is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" in Library work.
+Architecture behavioral of Entity multiplication_stage is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" in Library work.
+Architecture behavioral of Entity control_fsm is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" in Library work.
+Architecture behavioral of Entity ua_tx is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/prng_toplevel.vhd" in Library work.
+Architecture behavioral of Entity prng_toplevel is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <prng_toplevel> in library <work> (architecture <behavioral>) with generics.
+	width = 32
+
+Analyzing hierarchy for entity <control_fsm> in library <work> (architecture <behavioral>) with generics.
+	width = 32
+
+Analyzing hierarchy for entity <UA_TX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <divider> in library <work> (architecture <behavioral>) with generics.
+	width = 32
+
+Analyzing hierarchy for entity <multiplication_stage> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <word_TX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <byte_TX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bit_TX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <slow_clk> in library <work> (architecture <slow_clk>).
+
+Analyzing hierarchy for entity <debouncer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <debouncer_fsm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <debouncer_counter> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <prng_toplevel> in library <work> (Architecture <behavioral>).
+	width = 32
+Entity <prng_toplevel> analyzed. Unit <prng_toplevel> generated.
+
+Analyzing generic Entity <control_fsm> in library <work> (Architecture <behavioral>).
+	width = 32
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'Y_buf_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'X_buf_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'Z_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'px_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'py_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'mu1_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'mu2_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'delta_dbg' of component 'divider'.
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 94: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 77: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <seed_sel>
+INFO:Xst:1749 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 178: report: ERROR! INVALID STATE!
+Entity <control_fsm> analyzed. Unit <control_fsm> generated.
+
+Analyzing generic Entity <divider> in library <work> (Architecture <behavioral>).
+	width = 32
+Entity <divider> analyzed. Unit <divider> generated.
+
+Analyzing Entity <multiplication_stage> in library <work> (Architecture <behavioral>).
+Entity <multiplication_stage> analyzed. Unit <multiplication_stage> generated.
+
+Analyzing Entity <UA_TX> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'enable_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'load_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'count_out_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'n_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'p_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'enable_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'load_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'count_out_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'n_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'p_state_copy' of component 'debouncer'.
+Entity <UA_TX> analyzed. Unit <UA_TX> generated.
+
+Analyzing Entity <word_TX> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <seed_data>, <s_data>
+Entity <word_TX> analyzed. Unit <word_TX> generated.
+
+Analyzing Entity <byte_TX> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <byte>
+Entity <byte_TX> analyzed. Unit <byte_TX> generated.
+
+Analyzing Entity <bit_TX> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <byte_in>
+Entity <bit_TX> analyzed. Unit <bit_TX> generated.
+
+Analyzing Entity <slow_clk> in library <work> (Architecture <slow_clk>).
+Entity <slow_clk> analyzed. Unit <slow_clk> generated.
+
+Analyzing Entity <debouncer> in library <work> (Architecture <behavioral>).
+Entity <debouncer> analyzed. Unit <debouncer> generated.
+
+Analyzing Entity <debouncer_fsm> in library <work> (Architecture <behavioral>).
+Entity <debouncer_fsm> analyzed. Unit <debouncer_fsm> generated.
+
+Analyzing Entity <debouncer_counter> in library <work> (Architecture <rtl>).
+Entity <debouncer_counter> analyzed. Unit <debouncer_counter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <delta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 6-bit latch for signal <delta_pos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <output_ready>.
+    Found 32-bit register for signal <Q>.
+    Found 32-bit register for signal <R>.
+    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 138.
+    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 138.
+    Found 6-bit subtractor for signal <delta_pos$sub0000> created at line 135.
+    Found 2-bit register for signal <mu_phase1>.
+    Found 2-bit register for signal <mu_phase2>.
+    Found 5-bit register for signal <py>.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 111.
+    Found 32-bit comparator greatequal for signal <Q$cmp_ge0000> created at line 216.
+    Found 32-bit comparator less for signal <Q$cmp_lt0000> created at line 216.
+    Found 32-bit adder for signal <tempi1$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi2$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi3$addsub0000> created at line 81.
+    Found 32-bit register for signal <X_buffer>.
+    Found 32-bit register for signal <Y_buffer>.
+    Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
+    Found 32-bit register for signal <Z>.
+    Found 32-bit adder for signal <Z$addsub0000>.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 216.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 198.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 216.
+    Summary:
+	inferred 170 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <divider> synthesized.
+
+
+Synthesizing Unit <multiplication_stage>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd".
+WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" line 20: The result of a 32x16-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" line 26: The result of a 32x13-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 32-bit addsub for signal <output>.
+    Found 32x16-bit multiplier for signal <ay$mult0000> created at line 20.
+    Found 32-bit subtractor for signal <output$addsub0000> created at line 35.
+    Found 32-bit comparator lessequal for signal <output$cmp_le0000> created at line 39.
+    Found 32x13-bit multiplier for signal <rz$mult0000> created at line 26.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <multiplication_stage> synthesized.
+
+
+Synthesizing Unit <word_TX>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd".
+INFO:Xst:1799 - State sendt10w is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt11w is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt12w is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt13w is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt10 is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt11 is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt12 is never reached in FSM <p_state>.
+INFO:Xst:1799 - State sendt13 is never reached in FSM <p_state>.
+    Found finite state machine <FSM_0> for signal <p_state>.
+    -----------------------------------------------------------------------
+    | States             | 57                                             |
+    | Transitions        | 117                                            |
+    | Inputs             | 3                                              |
+    | Outputs            | 57                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <s_data>.
+    Found 32-bit register for signal <seed_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  64 D-type flip-flop(s).
+Unit <word_TX> synthesized.
+
+
+Synthesizing Unit <byte_TX>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd".
+    Found finite state machine <FSM_1> for signal <p_state>.
+    -----------------------------------------------------------------------
+    | States             | 29                                             |
+    | Transitions        | 60                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 30                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x8-bit ROM for signal <byte_out$mux0000> created at line 30.
+    Found 16x8-bit ROM for signal <byte_out$mux0001> created at line 30.
+WARNING:Xst:737 - Found 1-bit latch for signal <byte_TX_ready>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8-bit register for signal <byte>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <byte_TX> synthesized.
+
+
+Synthesizing Unit <bit_TX>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd".
+    Found finite state machine <FSM_2> for signal <p_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 12                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 10                                             |
+    | Clock              | slow_clk_in               (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <bit_TX> synthesized.
+
+
+Synthesizing Unit <slow_clk>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/slow_clk.vhd".
+    Found 14-bit up counter for signal <count>.
+    Found 14-bit comparator equal for signal <count$cmp_eq0000> created at line 29.
+    Found 1-bit register for signal <Toggle>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <slow_clk> synthesized.
+
+
+Synthesizing Unit <debouncer_fsm>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_fsm.vhd".
+    Found finite state machine <FSM_3> for signal <p_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | dbnce0                                         |
+    | Power Up State     | dbnce0                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 2-bit latch for signal <p_state_copy>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 20-bit comparator less for signal <p_state$cmp_lt0000> created at line 54.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Comparator(s).
+Unit <debouncer_fsm> synthesized.
+
+
+Synthesizing Unit <debouncer_counter>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_counter.vhd".
+    Found 20-bit up counter for signal <count>.
+    Found 20-bit comparator less for signal <count$cmp_lt0000> created at line 25.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <debouncer_counter> synthesized.
+
+
+Synthesizing Unit <control_fsm>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <seed>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4x44-bit ROM for signal <seed_sel$rom0000>.
+    Found 32-bit register for signal <s>.
+    Found 1-bit register for signal <prng_busy>.
+    Found 1-bit register for signal <prng_done>.
+    Found 1-bit register for signal <div_start>.
+    Found 32-bit register for signal <fsm_stage>.
+    Found 32-bit register for signal <s0>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  99 D-type flip-flop(s).
+Unit <control_fsm> synthesized.
+
+
+Synthesizing Unit <debouncer>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer.vhd".
+WARNING:Xst:1305 - Output <load_copy> is never assigned. Tied to value 0.
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <UA_TX>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd".
+Unit <UA_TX> synthesized.
+
+
+Synthesizing Unit <prng_toplevel>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/prng_toplevel.vhd".
+WARNING:Xst:1780 - Signal <reset_buf> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <prng_toplevel> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x8-bit ROM                                          : 2
+ 4x44-bit ROM                                          : 1
+# Multipliers                                          : 2
+ 32x13-bit multiplier                                  : 1
+ 32x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 8
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 2
+ 6-bit subtractor                                      : 1
+# Counters                                             : 3
+ 14-bit up counter                                     : 1
+ 20-bit up counter                                     : 2
+# Registers                                            : 50
+ 1-bit register                                        : 37
+ 2-bit register                                        : 2
+ 32-bit register                                       : 9
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 2
+ 32-bit latch                                          : 2
+ 6-bit latch                                           : 1
+# Comparators                                          : 14
+ 14-bit comparator equal                               : 1
+ 20-bit comparator less                                : 4
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <UART/test_word_instance/debouncer_fsm_instance/p_state/FSM> on signal <p_state[1:2]> with gray encoding.
+Optimizing FSM <UART/test_byte_instance/debouncer_fsm_instance/p_state/FSM> on signal <p_state[1:2]> with gray encoding.
+--------------------
+ State  | Encoding
+--------------------
+ dbnce0 | 00
+ dbnce1 | 01
+ dbnce2 | 11
+--------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <UART/bit_TX_instance/p_state/FSM> on signal <p_state[1:11]> with one-hot encoding.
+--------------------------
+ State     | Encoding
+--------------------------
+ idle      | 00000000001
+ start_bit | 00000000010
+ bit0      | 00000000100
+ bit1      | 00000001000
+ bit2      | 00000010000
+ bit3      | 00000100000
+ bit4      | 00001000000
+ bit5      | 00010000000
+ bit6      | 00100000000
+ bit7      | 01000000000
+ stop_bit  | 10000000000
+--------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <UART/byte_TX_instance/p_state/FSM> on signal <p_state[1:29]> with one-hot encoding.
+----------------------------------------------
+ State       | Encoding
+----------------------------------------------
+ idle        | 00000000000000000000000000001
+ byte_asciiw | 00000000000000000000000000100
+ byte_ascii  | 00000000000000000000000010000
+ nibble0w    | 00000000000000000000000001000
+ nibble1w    | 00000000000000000000001000000
+ nibble0     | 00000000000000000000000100000
+ nibble1     | 00000000000000000000010000000
+ tb0sw       | 00000000000000000000000000010
+ tb0s        | 00000000000000000000100000000
+ tb1sw       | 00000000000000000001000000000
+ tb1s        | 00000000000000000010000000000
+ tb2sw       | 00000000000000000100000000000
+ tb2s        | 00000000000000001000000000000
+ tb3sw       | 00000000000000010000000000000
+ tb3s        | 00000000000000100000000000000
+ tb4sw       | 00000000000001000000000000000
+ tb4s        | 00000000000010000000000000000
+ tb5sw       | 00000000000100000000000000000
+ tb5s        | 00000000001000000000000000000
+ tb6sw       | 00000000010000000000000000000
+ tb6s        | 00000000100000000000000000000
+ tb7sw       | 00000001000000000000000000000
+ tb7s        | 00000010000000000000000000000
+ tb8sw       | 00000100000000000000000000000
+ tb8s        | 00001000000000000000000000000
+ tb9sw       | 00010000000000000000000000000
+ tb9s        | 00100000000000000000000000000
+ tb10sw      | 01000000000000000000000000000
+ tb10s       | 10000000000000000000000000000
+----------------------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <UART/word_TX_instance/p_state/FSM> on signal <p_state[1:57]> with one-hot encoding.
+-----------------------------------------------------------------------
+ State    | Encoding
+-----------------------------------------------------------------------
+ idle     | 000000000000000000000000000000000000000000000000000000001
+ tw0sw    | 000000000000000000000000000000000000000000000000000000010
+ tw0s     | 000000000000000000001000000000000000000000000000000000000
+ tw1sw    | 000000000000000000010000000000000000000000000000000000000
+ tw1s     | 000000000000000000100000000000000000000000000000000000000
+ tw2sw    | 000000000000000001000000000000000000000000000000000000000
+ tw2s     | 000000000000000010000000000000000000000000000000000000000
+ tw3sw    | 000000000000000100000000000000000000000000000000000000000
+ tw3s     | 000000000000001000000000000000000000000000000000000000000
+ tw4sw    | 000000000000010000000000000000000000000000000000000000000
+ tw4s     | 000000000000100000000000000000000000000000000000000000000
+ tw5sw    | 000000000001000000000000000000000000000000000000000000000
+ tw5s     | 000000000010000000000000000000000000000000000000000000000
+ tw6sw    | 000000000100000000000000000000000000000000000000000000000
+ tw6s     | 000000001000000000000000000000000000000000000000000000000
+ tw7sw    | 000000010000000000000000000000000000000000000000000000000
+ tw7s     | 000000100000000000000000000000000000000000000000000000000
+ tw8sw    | 000001000000000000000000000000000000000000000000000000000
+ tw8s     | 000010000000000000000000000000000000000000000000000000000
+ tw9sw    | 000100000000000000000000000000000000000000000000000000000
+ tw9s     | 001000000000000000000000000000000000000000000000000000000
+ tw10sw   | 010000000000000000000000000000000000000000000000000000000
+ tw10s    | 100000000000000000000000000000000000000000000000000000000
+ ch_s0w   | 000000000000000000000000000000000000000000000000000000100
+ ch_s0    | 000000000000000000000000000000000000000000000000000001000
+ ch_0w    | 000000000000000000000000000000000000000000000000000010000
+ ch_0     | 000000000000000000000000000000000000000000000000000100000
+ ch_s0eqw | 000000000000000000000000000000000000000000000000001000000
+ ch_s0eq  | 000000000000000000000000000000000000000000000000010000000
+ ch_s0crw | 000000000000000000000000000000000000000010000000000000000
+ ch_s0cr  | 000000000000000000000000000000000000000100000000000000000
+ ch_s0lfw | 000000000000000000000000000000000000001000000000000000000
+ ch_s0lf  | 000000000000000000000000000000000000010000000000000000000
+ ch_s1w   | 000000000000000000000000000000000000100000000000000000000
+ ch_s1    | 000000000000000000000000000000000001000000000000000000000
+ ch_s1eqw | 000000000000000000000000000000000010000000000000000000000
+ ch_s1eq  | 000000000000000000000000000000000100000000000000000000000
+ ch_s1crw | 000000000000000000000000100000000000000000000000000000000
+ ch_s1cr  | 000000000000000000000001000000000000000000000000000000000
+ ch_s1lfw | 000000000000000000000010000000000000000000000000000000000
+ ch_s1lf  | 000000000000000000000100000000000000000000000000000000000
+ sendt10w | unreached
+ sendt11w | unreached
+ sendt12w | unreached
+ sendt13w | unreached
+ sendt10  | unreached
+ sendt11  | unreached
+ sendt12  | unreached
+ sendt13  | unreached
+ sends00w | 000000000000000000000000000000000000000000100000000000000
+ sends01w | 000000000000000000000000000000000000000000001000000000000
+ sends02w | 000000000000000000000000000000000000000000000010000000000
+ sends03w | 000000000000000000000000000000000000000000000000100000000
+ sends00  | 000000000000000000000000000000000000000001000000000000000
+ sends01  | 000000000000000000000000000000000000000000010000000000000
+ sends02  | 000000000000000000000000000000000000000000000100000000000
+ sends03  | 000000000000000000000000000000000000000000000001000000000
+ sends10w | 000000000000000000000000001000000000000000000000000000000
+ sends11w | 000000000000000000000000000010000000000000000000000000000
+ sends12w | 000000000000000000000000000000100000000000000000000000000
+ sends13w | 000000000000000000000000000000001000000000000000000000000
+ sends10  | 000000000000000000000000010000000000000000000000000000000
+ sends11  | 000000000000000000000000000100000000000000000000000000000
+ sends12  | 000000000000000000000000000001000000000000000000000000000
+ sends13  | 000000000000000000000000000000010000000000000000000000000
+-----------------------------------------------------------------------
+INFO:Xst:2261 - The FF/Latch <X_buffer_0> in Unit <DIV> is equivalent to the following 10 FFs/Latches, which will be removed : <X_buffer_2> <X_buffer_3> <X_buffer_4> <X_buffer_8> <X_buffer_9> <X_buffer_12> <X_buffer_13> <X_buffer_14> <X_buffer_15> <X_buffer_16> 
+INFO:Xst:2261 - The FF/Latch <X_buffer_1> in Unit <DIV> is equivalent to the following 20 FFs/Latches, which will be removed : <X_buffer_5> <X_buffer_6> <X_buffer_7> <X_buffer_10> <X_buffer_11> <X_buffer_17> <X_buffer_18> <X_buffer_19> <X_buffer_20> <X_buffer_21> <X_buffer_22> <X_buffer_23> <X_buffer_24> <X_buffer_25> <X_buffer_26> <X_buffer_27> <X_buffer_28> <X_buffer_29> <X_buffer_30> <X_buffer_31> 
+WARNING:Xst:1710 - FF/Latch <fsm_stage_15> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_16> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_17> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_18> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_19> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_20> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_21> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_22> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_23> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_24> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_25> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_26> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_27> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_28> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_29> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_30> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_31> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <DIV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <X_buffer_1> (without init value) has a constant value of 0 in block <DIV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <DIV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_3> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_4> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_5> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_6> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_7> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_8> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_9> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_10> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_11> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_12> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_13> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_14> (without init value) has a constant value of 0 in block <PRNG>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <X_buffer<31:17>> (without init value) have a constant value of 0 in block <divider>.
+
+Synthesizing (advanced) Unit <byte_TX>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_byte_out_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_byte_out_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <byte_TX> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divider>.
+The following registers are absorbed into accumulator <Y_buffer>: 1 register on signal <Y_buffer>.
+Unit <divider> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 4
+# ROMs                                                 : 3
+ 16x8-bit ROM                                          : 2
+ 4x44-bit ROM                                          : 1
+# Multipliers                                          : 2
+ 32x13-bit multiplier                                  : 1
+ 32x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 7
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 1
+ 6-bit subtractor                                      : 1
+# Counters                                             : 3
+ 14-bit up counter                                     : 1
+ 20-bit up counter                                     : 2
+# Accumulators                                         : 1
+ 32-bit down loadable accumulator                      : 1
+# Registers                                            : 295
+ Flip-Flops                                            : 295
+# Latches                                              : 6
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 2
+ 32-bit latch                                          : 2
+ 6-bit latch                                           : 1
+# Comparators                                          : 14
+ 14-bit comparator equal                               : 1
+ 20-bit comparator less                                : 4
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_1> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_5> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_6> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_7> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_10> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_buffer_11> (without init value) has a constant value of 0 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_stage_31> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_30> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_29> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_28> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_27> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_26> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_25> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_24> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_23> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_22> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_21> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_20> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_19> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_18> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_17> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_16> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_15> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_14> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_13> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_12> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_11> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_10> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_9> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_8> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_7> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_6> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_5> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_4> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fsm_stage_3> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <X_buffer_0> in Unit <divider> is equivalent to the following 10 FFs/Latches, which will be removed : <X_buffer_2> <X_buffer_3> <X_buffer_4> <X_buffer_8> <X_buffer_9> <X_buffer_12> <X_buffer_13> <X_buffer_14> <X_buffer_15> <X_buffer_16> 
+INFO:Xst:2261 - The FF/Latch <31> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <0> 
+WARNING:Xst:1710 - FF/Latch <31> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seed_11> (without init value) has a constant value of 1 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seed_31> (without init value) has a constant value of 0 in block <control_fsm>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <seed_5> in Unit <control_fsm> is equivalent to the following 2 FFs/Latches, which will be removed : <seed_8> <seed_15> 
+INFO:Xst:2261 - The FF/Latch <seed_6> in Unit <control_fsm> is equivalent to the following 4 FFs/Latches, which will be removed : <seed_14> <seed_17> <seed_18> <seed_26> 
+INFO:Xst:2261 - The FF/Latch <seed_13> in Unit <control_fsm> is equivalent to the following FF/Latch, which will be removed : <seed_22> 
+INFO:Xst:2261 - The FF/Latch <seed_0> in Unit <control_fsm> is equivalent to the following 3 FFs/Latches, which will be removed : <seed_16> <seed_29> <seed_30> 
+INFO:Xst:2261 - The FF/Latch <seed_7> in Unit <control_fsm> is equivalent to the following 2 FFs/Latches, which will be removed : <seed_10> <seed_21> 
+INFO:Xst:2261 - The FF/Latch <seed_4> in Unit <control_fsm> is equivalent to the following FF/Latch, which will be removed : <seed_27> 
+INFO:Xst:2261 - The FF/Latch <seed_1> in Unit <control_fsm> is equivalent to the following 3 FFs/Latches, which will be removed : <seed_3> <seed_9> <seed_19> 
+INFO:Xst:2261 - The FF/Latch <seed_23> in Unit <control_fsm> is equivalent to the following 2 FFs/Latches, which will be removed : <seed_24> <seed_25> 
+
+Optimizing unit <prng_toplevel> ...
+
+Optimizing unit <multiplication_stage> ...
+
+Optimizing unit <word_TX> ...
+
+Optimizing unit <byte_TX> ...
+
+Optimizing unit <slow_clk> ...
+
+Optimizing unit <divider> ...
+
+Optimizing unit <debouncer_fsm> ...
+WARNING:Xst:1294 - Latch <p_state_copy_0> is equivalent to a wire in block <debouncer_fsm>.
+WARNING:Xst:1294 - Latch <p_state_copy_1> is equivalent to a wire in block <debouncer_fsm>.
+
+Optimizing unit <control_fsm> ...
+WARNING:Xst:1710 - FF/Latch <UART/word_TX_instance/seed_data_31> (without init value) has a constant value of 0 in block <prng_toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <UART/word_TX_instance/seed_data_11> (without init value) has a constant value of 1 in block <prng_toplevel>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_30> in Unit <prng_toplevel> is equivalent to the following 3 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_29> <UART/word_TX_instance/seed_data_16> <UART/word_TX_instance/seed_data_0> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_19> in Unit <prng_toplevel> is equivalent to the following 3 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_9> <UART/word_TX_instance/seed_data_3> <UART/word_TX_instance/seed_data_1> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_27> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <UART/word_TX_instance/seed_data_4> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_15> in Unit <prng_toplevel> is equivalent to the following 2 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_8> <UART/word_TX_instance/seed_data_5> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_26> in Unit <prng_toplevel> is equivalent to the following 4 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_18> <UART/word_TX_instance/seed_data_17> <UART/word_TX_instance/seed_data_14> <UART/word_TX_instance/seed_data_6> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_21> in Unit <prng_toplevel> is equivalent to the following 2 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_10> <UART/word_TX_instance/seed_data_7> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_22> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <UART/word_TX_instance/seed_data_13> 
+INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_25> in Unit <prng_toplevel> is equivalent to the following 2 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_24> <UART/word_TX_instance/seed_data_23> 
+Found area constraint ratio of 100 (+ 5) on block prng_toplevel, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 415
+ Flip-Flops                                            : 415
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : prng_toplevel.ngr
+Top Level Output File Name         : prng_toplevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 45
+
+Cell Usage :
+# BELS                             : 1820
+#      GND                         : 1
+#      INV                         : 56
+#      LUT1                        : 21
+#      LUT2                        : 228
+#      LUT3                        : 249
+#      LUT3_L                      : 3
+#      LUT4                        : 547
+#      LUT4_D                      : 1
+#      LUT4_L                      : 10
+#      MUXCY                       : 368
+#      MUXF5                       : 60
+#      VCC                         : 1
+#      XORCY                       : 275
+# FlipFlops/Latches                : 464
+#      FD_1                        : 5
+#      FDC                         : 102
+#      FDCE                        : 171
+#      FDCPE                       : 32
+#      FDE                         : 86
+#      FDP                         : 3
+#      FDR                         : 14
+#      FDS_1                       : 2
+#      LD                          : 12
+#      LD_1                        : 1
+#      LDE                         : 36
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 44
+#      IBUF                        : 9
+#      OBUF                        : 35
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-5 
+
+ Number of Slices:                      607  out of   8672     6%  
+ Number of Slice Flip Flops:            464  out of  17344     2%  
+ Number of 4 input LUTs:               1115  out of  17344     6%  
+ Number of IOs:                          45
+ Number of bonded IOBs:                  45  out of    250    18%  
+ Number of MULT18X18SIOs:                 4  out of     28    14%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+---------------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)                       | Load  |
+-------------------------------------------------+---------------------------------------------+-------+
+clk                                              | BUFGP                                       | 404   |
+UART/slow_clk_instance/Toggle                    | NONE(UART/bit_TX_instance/p_state_FSM_FFd10)| 11    |
+UART/byte_TX_instance/p_state_FSM_FFd4           | NONE(UART/byte_TX_instance/byte_TX_ready)   | 1     |
+PRNG/DIV/Z_cmp_gt00002(PRNG/DIV/Z_cmp_gt000011:O)| BUFG(*)(PRNG/DIV/delta_pos_0)               | 36    |
+reset                                            | IBUF+BUFG                                   | 12    |
+-------------------------------------------------+---------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+------------------------+-------+
+Control Signal                           | Buffer(FF name)        | Load  |
+-----------------------------------------+------------------------+-------+
+reset                                    | IBUF                   | 278   |
+PRNG/s0_26_and0000(PRNG/s0_26_and00001:O)| NONE(PRNG/s0_0)        | 9     |
+PRNG/s0_26_and0001(PRNG/s0_26_and00011:O)| NONE(PRNG/s0_0)        | 9     |
+PRNG/s0_19_and0000(PRNG/s0_19_and00001:O)| NONE(PRNG/s0_1)        | 7     |
+PRNG/s0_19_and0001(PRNG/s0_19_and00011:O)| NONE(PRNG/s0_1)        | 7     |
+PRNG/s0_21_and0000(PRNG/s0_21_and00001:O)| NONE(PRNG/s0_10)       | 5     |
+PRNG/s0_21_and0001(PRNG/s0_21_and00011:O)| NONE(PRNG/s0_10)       | 5     |
+PRNG/s0_15_and0000(PRNG/s0_15_and00001:O)| NONE(PRNG/s0_15)       | 3     |
+PRNG/s0_15_and0001(PRNG/s0_15_and00011:O)| NONE(PRNG/s0_15)       | 3     |
+PRNG/s0_22_and0000(PRNG/s0_22_and00001:O)| NONE(PRNG/s0_13)       | 3     |
+PRNG/s0_22_and0001(PRNG/s0_22_and00011:O)| NONE(PRNG/s0_13)       | 3     |
+N0(XST_GND:G)                            | NONE(PRNG/s0_11)       | 2     |
+PRNG/s0_12_and0000(PRNG/s0_12_and00001:O)| NONE(PRNG/s0_12)       | 2     |
+PRNG/s0_12_and0001(PRNG/s0_12_and00011:O)| NONE(PRNG/s0_12)       | 2     |
+PRNG/s0_20_and0000(PRNG/s0_20_and00001:O)| NONE(PRNG/s0_20)       | 1     |
+PRNG/s0_20_and0001(PRNG/s0_20_and00011:O)| NONE(PRNG/s0_20)       | 1     |
+-----------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 21.358ns (Maximum Frequency: 46.821MHz)
+   Minimum input arrival time before clock: 6.867ns
+   Maximum output required time after clock: 11.373ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 21.358ns (frequency: 46.821MHz)
+  Total number of paths / destination ports: 151787877 / 693
+-------------------------------------------------------------------------
+Delay:               10.679ns (Levels of Logic = 11)
+  Source:            PRNG/DIV/Y_buffer_5 (FF)
+  Destination:       PRNG/DIV/py_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: PRNG/DIV/Y_buffer_5 to PRNG/DIV/py_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.514   0.796  PRNG/DIV/Y_buffer_5 (PRNG/DIV/Y_buffer_5)
+     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>117 (PRNG/DIV/py_mux0004<3>117)
+     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>139_SW0 (N216)
+     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>139 (PRNG/DIV/py_mux0004<3>139)
+     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>184_SW0 (N220)
+     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>184 (PRNG/DIV/py_mux0004<3>184)
+     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1121_SW0 (N224)
+     LUT4:I3->O            1   0.612   0.387  PRNG/DIV/py_mux0004<3>1121 (PRNG/DIV/py_mux0004<3>1121)
+     LUT3_L:I2->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1172_SW0 (N244)
+     LUT4:I3->O            1   0.612   0.387  PRNG/DIV/py_mux0004<3>1172 (PRNG/DIV/py_mux0004<3>1172)
+     LUT3_L:I2->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1392_SW0 (N254)
+     LUT4:I3->O            1   0.612   0.000  PRNG/DIV/py_mux0004<3>1392 (PRNG/DIV/py_mux0004<3>)
+     FD_1:D                    0.268          PRNG/DIV/py_1
+    ----------------------------------------
+    Total                     10.679ns (7.514ns logic, 3.165ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'UART/slow_clk_instance/Toggle'
+  Clock period: 2.536ns (frequency: 394.341MHz)
+  Total number of paths / destination ports: 12 / 11
+-------------------------------------------------------------------------
+Delay:               2.536ns (Levels of Logic = 1)
+  Source:            UART/bit_TX_instance/p_state_FSM_FFd11 (FF)
+  Destination:       UART/bit_TX_instance/p_state_FSM_FFd10 (FF)
+  Source Clock:      UART/slow_clk_instance/Toggle rising
+  Destination Clock: UART/slow_clk_instance/Toggle rising
+
+  Data Path: UART/bit_TX_instance/p_state_FSM_FFd11 to UART/bit_TX_instance/p_state_FSM_FFd10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             32   0.514   1.142  UART/bit_TX_instance/p_state_FSM_FFd11 (UART/bit_TX_instance/p_state_FSM_FFd11)
+     LUT2:I1->O            1   0.612   0.000  UART/bit_TX_instance/p_state_FSM_FFd10-In1 (UART/bit_TX_instance/p_state_FSM_FFd10-In)
+     FDC:D                     0.268          UART/bit_TX_instance/p_state_FSM_FFd10
+    ----------------------------------------
+    Total                      2.536ns (1.394ns logic, 1.142ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 535 / 110
+-------------------------------------------------------------------------
+Offset:              6.867ns (Levels of Logic = 6)
+  Source:            test_word_TX (PAD)
+  Destination:       UART/byte_TX_instance/p_state_FSM_FFd26 (FF)
+  Destination Clock: clk rising
+
+  Data Path: test_word_TX to UART/byte_TX_instance/p_state_FSM_FFd26
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.599  test_word_TX_IBUF (test_word_TX_IBUF)
+     LUT4:I2->O            3   0.612   0.454  UART/test_word_instance/debouncer_fsm_instance/x_out1 (UART/test_word_TX_internal)
+     LUT4:I3->O            1   0.612   0.000  UART/word_TX_instance/byte_out_valid_wg_lut<4> (UART/word_TX_instance/byte_out_valid_wg_lut<4>)
+     MUXCY:S->O           10   0.641   0.902  UART/word_TX_instance/byte_out_valid_wg_cy<4> (UART/word_TX_byte_out_valid_internal)
+     LUT3:I0->O            2   0.612   0.449  UART/byte_TX_instance/p_state_FSM_FFd26-In11 (UART/byte_TX_instance/N44)
+     LUT4:I1->O            1   0.612   0.000  UART/byte_TX_instance/p_state_FSM_FFd26-In1 (UART/byte_TX_instance/p_state_FSM_FFd26-In)
+     FDC:D                     0.268          UART/byte_TX_instance/p_state_FSM_FFd26
+    ----------------------------------------
+    Total                      6.867ns (4.463ns logic, 2.404ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
+  Total number of paths / destination ports: 20 / 12
+-------------------------------------------------------------------------
+Offset:              3.332ns (Levels of Logic = 2)
+  Source:            seed_sel<0> (PAD)
+  Destination:       PRNG/seed_4 (LATCH)
+  Destination Clock: reset falling
+
+  Data Path: seed_sel<0> to PRNG/seed_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.106   0.989  seed_sel_0_IBUF (seed_sel_0_IBUF)
+     INV:I->O              1   0.612   0.357  PRNG/Mrom_seed_sel_rom0000271_INV_0 (PRNG/Mrom_seed_sel_rom000027)
+     LD:D                      0.268          PRNG/seed_4
+    ----------------------------------------
+    Total                      3.332ns (1.986ns logic, 1.346ns route)
+                                       (59.6% logic, 40.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 280 / 35
+-------------------------------------------------------------------------
+Offset:              11.373ns (Levels of Logic = 8)
+  Source:            UART/byte_TX_instance/p_state_FSM_FFd28 (FF)
+  Destination:       bit_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: UART/byte_TX_instance/p_state_FSM_FFd28 to bit_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.514   0.690  UART/byte_TX_instance/p_state_FSM_FFd28 (UART/byte_TX_instance/p_state_FSM_FFd28)
+     LUT4:I0->O            2   0.612   0.532  UART/byte_TX_instance/byte_out<1>31 (UART/byte_TX_instance/N39)
+     LUT4:I0->O            1   0.612   0.360  UART/bit_TX_instance/bit_out355 (UART/bit_TX_instance/bit_out355)
+     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out463_SW0_SW0 (N330)
+     LUT4:I3->O            1   0.612   0.387  UART/bit_TX_instance/bit_out463_SW0 (N240)
+     LUT4:I2->O            1   0.612   0.360  UART/bit_TX_instance/bit_out463 (UART/bit_TX_instance/bit_out463)
+     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out589_SW0 (N242)
+     LUT4:I3->O            1   0.612   0.357  UART/bit_TX_instance/bit_out589 (bit_out_OBUF)
+     OBUF:I->O                 3.169          bit_out_OBUF (bit_out)
+    ----------------------------------------
+    Total                     11.373ns (7.967ns logic, 3.406ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'UART/slow_clk_instance/Toggle'
+  Total number of paths / destination ports: 16 / 1
+-------------------------------------------------------------------------
+Offset:              8.942ns (Levels of Logic = 7)
+  Source:            UART/bit_TX_instance/p_state_FSM_FFd5 (FF)
+  Destination:       bit_out (PAD)
+  Source Clock:      UART/slow_clk_instance/Toggle rising
+
+  Data Path: UART/bit_TX_instance/p_state_FSM_FFd5 to bit_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.603  UART/bit_TX_instance/p_state_FSM_FFd5 (UART/bit_TX_instance/p_state_FSM_FFd5)
+     LUT4:I0->O            1   0.612   0.000  UART/bit_TX_instance/bit_out201 (UART/bit_TX_instance/bit_out201)
+     MUXF5:I0->O           1   0.278   0.426  UART/bit_TX_instance/bit_out20_f5 (UART/bit_TX_instance/bit_out20)
+     LUT4:I1->O            1   0.612   0.000  UART/bit_TX_instance/bit_out50_F (N338)
+     MUXF5:I0->O           1   0.278   0.360  UART/bit_TX_instance/bit_out50 (UART/bit_TX_instance/bit_out50)
+     LUT4:I3->O            1   0.612   0.509  UART/bit_TX_instance/bit_out136 (UART/bit_TX_instance/bit_out136)
+     LUT4:I0->O            1   0.612   0.357  UART/bit_TX_instance/bit_out589 (bit_out_OBUF)
+     OBUF:I->O                 3.169          bit_out_OBUF (bit_out)
+    ----------------------------------------
+    Total                      8.942ns (6.687ns logic, 2.255ns route)
+                                       (74.8% logic, 25.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'UART/byte_TX_instance/p_state_FSM_FFd4'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.100ns (Levels of Logic = 2)
+  Source:            UART/byte_TX_instance/byte_TX_ready (LATCH)
+  Destination:       UA_TX_ready (PAD)
+  Source Clock:      UART/byte_TX_instance/p_state_FSM_FFd4 rising
+
+  Data Path: UART/byte_TX_instance/byte_TX_ready to UA_TX_ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q            60   0.588   1.232  UART/byte_TX_instance/byte_TX_ready (UART/byte_TX_instance/byte_TX_ready)
+     LUT3:I0->O            4   0.612   0.499  UART/word_TX_instance/word_TX_ready349 (UA_TX_ready_OBUF)
+     OBUF:I->O                 3.169          UA_TX_ready_OBUF (UA_TX_ready)
+    ----------------------------------------
+    Total                      6.100ns (4.369ns logic, 1.731ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.52 secs
+ 
+--> 
+
+Total memory usage is 303752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  110 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
+

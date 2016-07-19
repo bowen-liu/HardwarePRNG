@@ -1,0 +1,5 @@
+vhdl work "../Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/PRNG_CONST.vhd"
+vhdl work "../Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd"
+vhdl work "../Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd"
+vhdl work "../Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd"
+vhdl work "../Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm_tb.vhd"

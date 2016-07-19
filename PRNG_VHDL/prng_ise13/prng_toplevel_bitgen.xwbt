@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\bowenliu\prng_ise13\prng_toplevel.ncd
+OUTFILE=C:\Users\bowenliu\prng_ise13\prng_toplevel.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-5fg320
+WORKINGDIR=C:\Users\bowenliu\prng_ise13
+LICENSE=ISE
+USER_INFO=174116782_174116783_177179904_529

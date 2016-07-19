@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+# Start of session at: Mon Jul 18 13:21:58 2016
+# Process ID: 5452
+# Log file: C:/Users/bowenliu/prng_ise13/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/bowenliu/prng_ise13/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/bowenliu/prng_ise13/pa.fromHdl.tcl
+exit
+stop_gui

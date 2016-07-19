@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/divider.xst" -ofn "C:/Users/bowenliu/prng_ise13/divider.syr" 

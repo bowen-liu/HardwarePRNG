@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Mon Jul 18 13:56:26 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seed_sel<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "seed_sel<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "PRNG_busy" LOCATE = SITE "J14" LEVEL 1;
+COMP "bit_out" LOCATE = SITE "P9" LEVEL 1;
+COMP "reset" LOCATE = SITE "B18" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "start" LOCATE = SITE "D18" LEVEL 1;
+COMP "test_byte_TX" LOCATE = SITE "H13" LEVEL 1;
+COMP "baud_sel<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "baud_sel<1>" LOCATE = SITE "N17" LEVEL 1;
+COMP "baud_sel<2>" LOCATE = SITE "R17" LEVEL 1;
+COMP "test_word_TX" LOCATE = SITE "E18" LEVEL 1;
+COMP "UA_TX_ready" LOCATE = SITE "J15" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

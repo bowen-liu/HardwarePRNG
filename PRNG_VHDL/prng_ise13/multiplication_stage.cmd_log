@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/multiplication_stage.xst" -ofn "C:/Users/bowenliu/prng_ise13/multiplication_stage.syr" 

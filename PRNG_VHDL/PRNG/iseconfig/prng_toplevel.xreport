@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-07-07T21:41:40</DateModified>
-  <ModuleName>control_fsm</ModuleName>
+  <DateModified>2016-07-18T18:44:02</DateModified>
+  <ModuleName>prng_toplevel</ModuleName>
   <SummaryTimeStamp>2016-07-07T21:39:48</SummaryTimeStamp>
   <SavedFilePath>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/iseconfig/prng_toplevel.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG\</ImplementationReportsDirectory>

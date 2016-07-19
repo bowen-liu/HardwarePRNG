@@ -1,0 +1,577 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: divider.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "divider.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "divider"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-fg320
+
+---- Source Options
+Top Module Name                    : divider
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd" in Library work.
+Architecture behavioral of Entity divider is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <divider> in library <work> (architecture <behavioral>) with generics.
+	width = 32
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <divider> in library <work> (Architecture <behavioral>).
+	width = 32
+Entity <divider> analyzed. Unit <divider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <delta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 6-bit latch for signal <delta_pos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit register for signal <R>.
+    Found 32-bit register for signal <Q>.
+    Found 1-bit register for signal <output_ready>.
+    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 138.
+    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 138.
+    Found 6-bit subtractor for signal <delta_pos$sub0000> created at line 135.
+    Found 2-bit register for signal <mu_phase1>.
+    Found 2-bit register for signal <mu_phase2>.
+    Found 5-bit register for signal <py>.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 111.
+    Found 32-bit comparator greatequal for signal <Q$cmp_ge0000> created at line 216.
+    Found 32-bit comparator less for signal <Q$cmp_lt0000> created at line 216.
+    Found 32-bit adder for signal <tempi1$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi2$addsub0000> created at line 81.
+    Found 32-bit adder for signal <tempi3$addsub0000> created at line 81.
+    Found 32-bit register for signal <X_buffer>.
+    Found 32-bit register for signal <Y_buffer>.
+    Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
+    Found 32-bit register for signal <Z>.
+    Found 32-bit adder for signal <Z$addsub0000>.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 216.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 198.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 216.
+    Summary:
+	inferred 170 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <divider> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 1
+ 2-bit register                                        : 2
+ 32-bit register                                       : 5
+ 5-bit register                                        : 1
+# Latches                                              : 2
+ 32-bit latch                                          : 1
+ 6-bit latch                                           : 1
+# Comparators                                          : 8
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <31>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <divider>.
+The following registers are absorbed into accumulator <Y_buffer>: 1 register on signal <Y_buffer>.
+Unit <divider> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 4
+ 6-bit subtractor                                      : 1
+# Accumulators                                         : 1
+ 32-bit down loadable accumulator                      : 1
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+# Latches                                              : 2
+ 32-bit latch                                          : 1
+ 6-bit latch                                           : 1
+# Comparators                                          : 8
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 2
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <mu_phase1_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mu_phase2_0> (without init value) has a constant value of 1 in block <divider>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <31> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <0> 
+WARNING:Xst:1710 - FF/Latch <31> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <divider> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block divider, actual ratio is 6.
+Latch delta_30 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_29 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_28 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_27 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_26 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_25 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_24 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_23 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_22 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_21 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_20 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_19 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_18 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_17 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_16 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_15 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_14 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_13 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_12 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_11 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_10 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_9 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_8 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_7 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_6 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_5 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_4 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_3 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch delta_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop X_buffer_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 200
+ Flip-Flops                                            : 200
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : divider.ngr
+Top Level Output File Name         : divider
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 388
+
+Cell Usage :
+# BELS                             : 1329
+#      GND                         : 1
+#      INV                         : 67
+#      LUT1                        : 1
+#      LUT2                        : 162
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 175
+#      LUT3_D                      : 18
+#      LUT3_L                      : 6
+#      LUT4                        : 409
+#      LUT4_D                      : 26
+#      LUT4_L                      : 65
+#      MUXCY                       : 200
+#      MUXF5                       : 30
+#      VCC                         : 1
+#      XORCY                       : 165
+# FlipFlops/Latches                : 266
+#      FD_1                        : 5
+#      FDCE                        : 193
+#      FDS_1                       : 2
+#      LDE                         : 66
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 387
+#      IBUF                        : 66
+#      OBUF                        : 321
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-5 
+
+ Number of Slices:                      496  out of   8672     5%  
+ Number of Slice Flip Flops:            204  out of  17344     1%  
+ Number of 4 input LUTs:                932  out of  17344     5%  
+ Number of IOs:                         388
+ Number of bonded IOBs:                 388  out of    250   155% (*) 
+    IOB Flip Flops:                      62
+ Number of GCLKs:                         2  out of     24     8%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)  | Load  |
+--------------------------------------+------------------------+-------+
+clk                                   | BUFGP                  | 200   |
+delta_cmp_gt00001(delta_cmp_gt00001:O)| BUFG(*)(delta_pos_0)   | 66    |
+--------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 193   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 21.464ns (Maximum Frequency: 46.590MHz)
+   Minimum input arrival time before clock: 6.968ns
+   Maximum output required time after clock: 10.538ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 21.464ns (frequency: 46.590MHz)
+  Total number of paths / destination ports: 686424 / 264
+-------------------------------------------------------------------------
+Delay:               10.732ns (Levels of Logic = 11)
+  Source:            Y_buffer_3 (FF)
+  Destination:       py_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: Y_buffer_3 to py_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.514   0.849  Y_buffer_3 (Y_buffer_3)
+     LUT4_L:I0->LO         1   0.612   0.103  py_mux0004<3>117 (py_mux0004<3>117)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>139_SW1 (N312)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0004<3>139 (py_mux0004<3>139)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>184_SW0 (N288)
+     LUT4_L:I3->LO         1   0.612   0.103  py_mux0004<3>184 (py_mux0004<3>184)
+     LUT4:I3->O            1   0.612   0.360  py_mux0004<3>1121_SW1 (N314)
+     LUT4_L:I3->LO         1   0.612   0.130  py_mux0004<3>1121 (py_mux0004<3>1121)
+     LUT3:I2->O            1   0.612   0.360  py_mux0004<3>1172_SW0 (N3101)
+     LUT4:I3->O            1   0.612   0.387  py_mux0004<3>1172 (py_mux0004<3>1172)
+     LUT3_L:I2->LO         1   0.612   0.103  py_mux0004<3>1392_SW0 (N300)
+     LUT4:I3->O            1   0.612   0.000  py_mux0004<3>1392 (py_mux0004<3>)
+     FD_1:D                    0.268          py_1
+    ----------------------------------------
+    Total                     10.732ns (7.514ns logic, 3.218ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2056 / 386
+-------------------------------------------------------------------------
+Offset:              6.968ns (Levels of Logic = 35)
+  Source:            start (PAD)
+  Destination:       Y_buffer_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to Y_buffer_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           204   1.106   1.119  start_IBUF (Y_buffer_eqn)
+     INV:I->O              3   0.612   0.603  Y_buffer_eqn_inv2_INV_0 (Y_buffer_eqn_inv)
+     LUT3:I0->O            1   0.612   0.000  Maccum_Y_buffer_lut<0> (Maccum_Y_buffer_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Maccum_Y_buffer_cy<0> (Maccum_Y_buffer_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<1> (Maccum_Y_buffer_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<2> (Maccum_Y_buffer_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<3> (Maccum_Y_buffer_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<4> (Maccum_Y_buffer_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<5> (Maccum_Y_buffer_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<6> (Maccum_Y_buffer_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<7> (Maccum_Y_buffer_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<8> (Maccum_Y_buffer_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<9> (Maccum_Y_buffer_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Maccum_Y_buffer_cy<10> (Maccum_Y_buffer_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<11> (Maccum_Y_buffer_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<12> (Maccum_Y_buffer_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<13> (Maccum_Y_buffer_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<14> (Maccum_Y_buffer_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<15> (Maccum_Y_buffer_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<16> (Maccum_Y_buffer_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<17> (Maccum_Y_buffer_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<18> (Maccum_Y_buffer_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<19> (Maccum_Y_buffer_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<20> (Maccum_Y_buffer_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<21> (Maccum_Y_buffer_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<22> (Maccum_Y_buffer_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<23> (Maccum_Y_buffer_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<24> (Maccum_Y_buffer_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<25> (Maccum_Y_buffer_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<26> (Maccum_Y_buffer_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<27> (Maccum_Y_buffer_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<28> (Maccum_Y_buffer_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Maccum_Y_buffer_cy<29> (Maccum_Y_buffer_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Maccum_Y_buffer_cy<30> (Maccum_Y_buffer_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  Maccum_Y_buffer_xor<31> (Result<31>)
+     FDCE:D                    0.268          Y_buffer_31
+    ----------------------------------------
+    Total                      6.968ns (5.246ns logic, 1.722ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 378 / 233
+-------------------------------------------------------------------------
+Offset:              10.538ns (Levels of Logic = 7)
+  Source:            X_buffer_1 (FF)
+  Destination:       px_dbg<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: X_buffer_1 to px_dbg<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.514   0.945  X_buffer_1 (X_buffer_1)
+     LUT4_L:I0->LO         1   0.612   0.252  px<0>11 (px<0>11)
+     LUT4:I0->O            1   0.612   0.387  px<0>30 (px<0>30)
+     LUT4:I2->O            1   0.612   0.387  px<0>111 (px<0>111)
+     LUT4_L:I2->LO         1   0.612   0.252  px<0>213 (px<0>213)
+     LUT4:I0->O            1   0.612   0.509  px<0>315 (px<0>315)
+     LUT4:I0->O            3   0.612   0.451  px<0>417 (px_dbg_0_OBUF)
+     OBUF:I->O                 3.169          px_dbg_0_OBUF (px_dbg<0>)
+    ----------------------------------------
+    Total                     10.538ns (7.355ns logic, 3.183ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'delta_cmp_gt00001'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              4.114ns (Levels of Logic = 1)
+  Source:            delta_30_1 (LATCH)
+  Destination:       delta_dbg<30> (PAD)
+  Source Clock:      delta_cmp_gt00001 falling
+
+  Data Path: delta_30_1 to delta_dbg<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.357  delta_30_1 (delta_30_1)
+     OBUF:I->O                 3.169          delta_dbg_30_OBUF (delta_dbg<30>)
+    ----------------------------------------
+    Total                      4.114ns (3.757ns logic, 0.357ns route)
+                                       (91.3% logic, 8.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.48 secs
+ 
+--> 
+
+Total memory usage is 284040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

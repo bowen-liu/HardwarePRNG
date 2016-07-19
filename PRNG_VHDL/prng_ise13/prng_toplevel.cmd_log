@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml prng_toplevel.twx prng_toplevel.ncd -o prng_toplevel.twr prng_toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml prng_toplevel.twx prng_toplevel.ncd -o prng_toplevel.twr prng_toplevel.pcf -ucf prng_toplevel.ucf 
+bitgen -intstyle ise -f prng_toplevel.ut prng_toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/bowenliu/prng_ise13/prng_toplevel.xst" -ofn "C:/Users/bowenliu/prng_ise13/prng_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prng_toplevel.ucf -p xc3s1200e-fg320-5 prng_toplevel.ngc prng_toplevel.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o prng_toplevel_map.ncd prng_toplevel.ngd prng_toplevel.pcf 
+par -w -intstyle ise -ol high -t 1 prng_toplevel_map.ncd prng_toplevel.ncd prng_toplevel.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml prng_toplevel.twx prng_toplevel.ncd -o prng_toplevel.twr prng_toplevel.pcf -ucf prng_toplevel.ucf 
+bitgen -intstyle ise -f prng_toplevel.ut prng_toplevel.ncd 
