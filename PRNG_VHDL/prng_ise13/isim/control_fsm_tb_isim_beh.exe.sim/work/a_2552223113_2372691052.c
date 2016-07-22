@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm_tb.vhd";
+static const char *ng0 = "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm_tb.vhd";
 
 
 
@@ -124,7 +124,7 @@ LAB2:    xsi_set_current_line(72, ng0);
     *((unsigned char *)t6) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
     xsi_set_current_line(74, ng0);
-    t2 = (t0 + 7768);
+    t2 = (t0 + 7860);
     t4 = (t0 + 4464);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -237,7 +237,7 @@ LAB17:    t3 = (t0 + 2152U);
 LAB19:    goto LAB17;
 
 LAB20:    xsi_set_current_line(85, ng0);
-    t2 = (t0 + 7770);
+    t2 = (t0 + 7862);
     t4 = (t0 + 4464);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -354,7 +354,7 @@ LAB37:    t3 = (t0 + 2152U);
 LAB39:    goto LAB37;
 
 LAB40:    xsi_set_current_line(96, ng0);
-    t2 = (t0 + 7772);
+    t2 = (t0 + 7864);
     t4 = (t0 + 4464);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -471,7 +471,7 @@ LAB57:    t3 = (t0 + 2152U);
 LAB59:    goto LAB57;
 
 LAB60:    xsi_set_current_line(107, ng0);
-    t2 = (t0 + 7774);
+    t2 = (t0 + 7866);
     t4 = (t0 + 4464);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);

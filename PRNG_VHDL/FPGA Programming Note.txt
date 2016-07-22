@@ -1,0 +1,5 @@
+For some reason, the FPGA implementation ONLY works properly when chipscope is open.
+1) generate the programming file as usual
+2) program the fpga with it
+3) open chipscope and initialize JTAG chain
+4) right click on the fpga in the chain, and reset project configuration

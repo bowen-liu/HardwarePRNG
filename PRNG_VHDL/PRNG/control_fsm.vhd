@@ -100,11 +100,9 @@ begin
 		--When a new value has been calculated at the end of a generation cycle, send the seed to UATX
 		--This action has to be done on the rising edge, or else the synthesized clock rate is significantly impacted for some reason
 		elsif(clk = '1' and clk'event) then 
-			if(fsm_stage = 5) then
+			if(fsm_stage = 4) then
 				s0 <= mul_out;		--Store the latest seed 
-				if(UA_TX_ready = '1') then
-					s <= mul_out;		--Output the latest seed
-				end if;
+				s <= mul_out;		--Output the latest seed to UATX
 			end if;
 		end if;
 	end process;
@@ -126,18 +124,17 @@ begin
 			
 				--In reset state. Start the divider
 				when 0 =>
+					prng_done <= '0';
 					if(start = '1') then
-						div_start <= '1';
 						fsm_stage <= 1;
+						div_start <= '1';
 						prng_busy <= '1';
-						prng_done <= '0';
 					else
-						div_start <= '0';
 						fsm_stage <= 0;
+						div_start <= '0';
 						prng_busy <= '0';
-						prng_done <= '0';
 					end if;
-				
+
 				--Turn off the divider start signal
 				when 1 =>
 					div_start <= '0';
@@ -152,30 +149,23 @@ begin
 					end if;
 				
 				--Wait one cycle for mul, sub, and mod to complete
+				--NOTE: one cycle may not be enough depending on the clock rate!
 				when 3 =>
 					fsm_stage <= 4;
-					
-				--Wait one more cycle for mul, sub, and mod to complete
-				when 4 =>
-					fsm_stage <= 5;
-				
-				--The result of the mul stage is outputted to the UART at the rising edge by the other process in this file
-				when 5 =>
-					fsm_stage <= 6;
 				
 				--Write the result back as the new seed and output the seed when UART is ready
-				when 6 =>
+				when 4 =>
 					prng_busy <= '0';
 					
 					--Only change the state if UA_TX is ready. Otherwise, we wait.
 					if(UA_TX_ready = '1') then
-						fsm_stage <= 7;
+						fsm_stage <= 5;
 					else
-						fsm_stage <= 6;
+						fsm_stage <= 4;
 					end if;
 				
 				--Assert PRNG_DONE so UART will accept the seed
-				when 7 =>
+				when 5 =>
 					prng_done <= '1';
 					fsm_stage <= 0;
 					

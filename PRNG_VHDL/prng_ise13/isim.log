@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\bowenliu\prng_ise13\control_fsm_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/bowenliu/prng_ise13/control_fsm_tb_isim_beh.wdb 
+Running: C:\Users\bowenliu\Desktop\UvicSummer2016Ceng441-master\PRNG_VHDL\prng_ise13\control_fsm_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm_tb_isim_beh.wdb 
 ISim O.87xd (signature 0xc3576ebc)
 ----------------------------------------------------------------------
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -22,4 +22,7 @@ Simulator is doing circuit initialization process.
 at 0 ps, Instance /control_fsm_tb/uut/MUL/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /control_fsm_tb/uut/MUL/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
-Stopped at time : 3018710 ns : File "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd" Line 101
+at 165 ns(1): Note: mu_multiply: ERR MU IS NOT -1 OR 1 (/control_fsm_tb/uut/DIV/).
+at 355 ns(1): Note: mu_multiply: ERR MU IS NOT -1 OR 1 (/control_fsm_tb/uut/DIV/).
+at 535 ns(1): Note: mu_multiply: ERR MU IS NOT -1 OR 1 (/control_fsm_tb/uut/DIV/).
+Stopped at time : 1057975 ns : File "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/divide_2.vhd" Line 240

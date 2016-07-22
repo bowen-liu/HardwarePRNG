@@ -23,7 +23,8 @@ ARCHITECTURE behavior OF prng_tl_tb IS
          bit_out : OUT  std_logic;
 			
 			--debug
-			prng_seed_out : out  STD_LOGIC_VECTOR (width-1 downto 0)
+			prng_seed_out : out  STD_LOGIC_VECTOR (width-1 downto 0);
+			clk_half_out : out STD_LOGIC
         );
     END COMPONENT;
     
@@ -42,8 +43,9 @@ ARCHITECTURE behavior OF prng_tl_tb IS
    signal UA_TX_ready : std_logic;
    signal bit_out : std_logic;
 	
-	--debig
+	--debug
 	signal prng_seed_out :  STD_LOGIC_VECTOR (width-1 downto 0);
+	signal clk_half_out : STD_LOGIC := '0';
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -62,7 +64,10 @@ BEGIN
           PRNG_busy => PRNG_busy,
           UA_TX_ready => UA_TX_ready,
           bit_out => bit_out,
-			 prng_seed_out => prng_seed_out
+			 
+			 --debug
+			 prng_seed_out => prng_seed_out,
+			 clk_half_out => clk_half_out
         );
 
    -- Clock process definitions

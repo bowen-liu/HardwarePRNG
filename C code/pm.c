@@ -1,25 +1,28 @@
 #include <stdio.h>
+#include <stdint.h>
+#include <math.h>
+
+#define ITERATIONS 	50
+
+#define a  		16807
+#define M 		2147483647
+#define q  		127773
+#define r 		2836
 
 int main(){
 
-    const int a = 16807;
-    const int M = 2147483647;
-    const int q = 127773;
-    const int r = 2836;
-      
-    int i, Y, Z;
-    //int s = 0x7B818935;
-    int s = 0x73f12c81;
+    uint32_t i, Y, Z;
+    int32_t s = 0x73f12c81;
     
-    
-    for(i=0;i<10;i++){
+    for(i=0; i<ITERATIONS; i++){
 
         Y = s % q;
         Z = s / q;
-        s = (a*Y - r*Z) % M;
-        //s = (a*Y - r*Z);
+        s = (int64_t)a*Y - (int64_t)r*Z;
         
-        printf("Current Seed: %d\n", s);
+        if(s <= 0) s += M;
+        
+        printf("%d\n", s);
     }
 }
 

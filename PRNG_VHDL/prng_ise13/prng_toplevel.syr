@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: prng_toplevel.prj
 
@@ -64,13 +64,15 @@ Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
 Multiplier Style                   : Auto
-Automatic Register Balancing       : No
+Automatic Register Balancing       : Yes
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
 Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Yes
@@ -81,7 +83,7 @@ Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Effort                : 2
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -104,38 +106,40 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/prng_package.vhd" in Library work.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_fsm.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/prng_package.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer_fsm.vhd" in Library work.
 Architecture behavioral of Entity debouncer_fsm is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_counter.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer_counter.vhd" in Library work.
 Architecture rtl of Entity debouncer_counter is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/PRNG_CONST.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/PRNG_CONST.vhd" in Library work.
 Architecture prng_const of Entity prng_const is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/word_TX.vhd" in Library work.
 Architecture behavioral of Entity word_tx is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" in Library work.
 Architecture behavioral of Entity byte_tx is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/bit_TX.vhd" in Library work.
 Architecture behavioral of Entity bit_tx is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/slow_clk.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/slow_clk.vhd" in Library work.
 Architecture slow_clk of Entity slow_clk is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer.vhd" in Library work.
 Architecture behavioral of Entity debouncer is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/divide_2.vhd" in Library work.
 Architecture behavioral of Entity divider is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/multiplication_stage.vhd" in Library work.
 Architecture behavioral of Entity multiplication_stage is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" in Library work.
 Architecture behavioral of Entity control_fsm is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" in Library work.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" in Library work.
 Architecture behavioral of Entity ua_tx is up to date.
-Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/prng_toplevel.vhd" in Library work.
-Architecture behavioral of Entity prng_toplevel is up to date.
+Compiling vhdl file "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/prng_toplevel.vhd" in Library work.
+Entity <prng_toplevel> compiled.
+Entity <prng_toplevel> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <prng_toplevel> in library <work> (architecture <behavioral>) with generics.
+	slow_clk_max_count = 1
 	width = 32
 
 Analyzing hierarchy for entity <control_fsm> in library <work> (architecture <behavioral>) with generics.
@@ -167,23 +171,24 @@ Analyzing hierarchy for entity <debouncer_counter> in library <work> (architectu
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing generic Entity <prng_toplevel> in library <work> (Architecture <behavioral>).
+	slow_clk_max_count = 1
 	width = 32
 Entity <prng_toplevel> analyzed. Unit <prng_toplevel> generated.
 
 Analyzing generic Entity <control_fsm> in library <work> (Architecture <behavioral>).
 	width = 32
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'Y_buf_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'X_buf_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'Z_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'px_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'py_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'mu1_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'mu2_dbg' of component 'divider'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 60: Unconnected output port 'delta_dbg' of component 'divider'.
-INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 94: Mux is complete : default of case is discarded
-WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 77: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'Y_buf_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'X_buf_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'Z_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'px_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'py_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'mu1_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'mu2_dbg' of component 'divider'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 60: Unconnected output port 'delta_dbg' of component 'divider'.
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 94: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 78: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <seed_sel>
-INFO:Xst:1749 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd" line 178: report: ERROR! INVALID STATE!
+INFO:Xst:1749 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd" line 173: report: ERROR! INVALID STATE!
 Entity <control_fsm> analyzed. Unit <control_fsm> generated.
 
 Analyzing generic Entity <divider> in library <work> (Architecture <behavioral>).
@@ -194,34 +199,34 @@ Analyzing Entity <multiplication_stage> in library <work> (Architecture <behavio
 Entity <multiplication_stage> analyzed. Unit <multiplication_stage> generated.
 
 Analyzing Entity <UA_TX> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'enable_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'load_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'count_out_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'n_state_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'p_state_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'enable_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'load_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'count_out_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'n_state_copy' of component 'debouncer'.
-WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'p_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'enable_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'load_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'count_out_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'n_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 225: Unconnected output port 'p_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'enable_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'load_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'count_out_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'n_state_copy' of component 'debouncer'.
+WARNING:Xst:753 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd" line 233: Unconnected output port 'p_state_copy' of component 'debouncer'.
 Entity <UA_TX> analyzed. Unit <UA_TX> generated.
 
 Analyzing Entity <word_TX> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/word_TX.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <seed_data>, <s_data>
 Entity <word_TX> analyzed. Unit <word_TX> generated.
 
 Analyzing Entity <byte_TX> in library <work> (Architecture <behavioral>).
-INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
-WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" line 46: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <byte>
 Entity <byte_TX> analyzed. Unit <byte_TX> generated.
 
 Analyzing Entity <bit_TX> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/bit_TX.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <byte_in>
 Entity <bit_TX> analyzed. Unit <bit_TX> generated.
 
@@ -245,21 +250,21 @@ Entity <debouncer_counter> analyzed. Unit <debouncer_counter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <divider>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/divide_2.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/divide_2.vhd".
 WARNING:Xst:737 - Found 32-bit latch for signal <delta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 6-bit latch for signal <delta_pos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 1-bit register for signal <output_ready>.
     Found 32-bit register for signal <Q>.
     Found 32-bit register for signal <R>.
-    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 138.
-    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 138.
-    Found 6-bit subtractor for signal <delta_pos$sub0000> created at line 135.
+    Found 6-bit comparator greater for signal <delta$cmp_gt0000> created at line 136.
+    Found 6-bit comparator less for signal <delta$cmp_lt0000> created at line 136.
+    Found 6-bit subtractor for signal <delta_pos$sub0000> created at line 133.
     Found 2-bit register for signal <mu_phase1>.
     Found 2-bit register for signal <mu_phase2>.
     Found 5-bit register for signal <py>.
-    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 111.
-    Found 32-bit comparator greatequal for signal <Q$cmp_ge0000> created at line 216.
-    Found 32-bit comparator less for signal <Q$cmp_lt0000> created at line 216.
+    Found 32-bit comparator greater for signal <py$cmp_gt0000> created at line 110.
+    Found 32-bit comparator greatequal for signal <Q$cmp_ge0000> created at line 214.
+    Found 32-bit comparator less for signal <Q$cmp_lt0000> created at line 214.
     Found 32-bit adder for signal <tempi1$addsub0000> created at line 81.
     Found 32-bit adder for signal <tempi2$addsub0000> created at line 81.
     Found 32-bit adder for signal <tempi3$addsub0000> created at line 81.
@@ -268,9 +273,9 @@ WARNING:Xst:737 - Found 6-bit latch for signal <delta_pos>. Latches may be gener
     Found 32-bit subtractor for signal <Y_buffer$addsub0000>.
     Found 32-bit register for signal <Z>.
     Found 32-bit adder for signal <Z$addsub0000>.
-    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 216.
-    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 198.
-    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 216.
+    Found 32-bit comparator greatequal for signal <Z$cmp_ge0000> created at line 214.
+    Found 5-bit comparator greater for signal <Z$cmp_gt0000> created at line 196.
+    Found 32-bit comparator less for signal <Z$cmp_lt0000> created at line 214.
     Summary:
 	inferred 170 D-type flip-flop(s).
 	inferred   6 Adder/Subtractor(s).
@@ -279,9 +284,9 @@ Unit <divider> synthesized.
 
 
 Synthesizing Unit <multiplication_stage>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd".
-WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" line 20: The result of a 32x16-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/multiplication_stage.vhd" line 26: The result of a 32x13-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/multiplication_stage.vhd".
+WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/multiplication_stage.vhd" line 20: The result of a 32x16-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/multiplication_stage.vhd" line 26: The result of a 32x13-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 32-bit addsub for signal <output>.
     Found 32x16-bit multiplier for signal <ay$mult0000> created at line 20.
     Found 32-bit subtractor for signal <output$addsub0000> created at line 35.
@@ -295,7 +300,7 @@ Unit <multiplication_stage> synthesized.
 
 
 Synthesizing Unit <word_TX>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/word_TX.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/word_TX.vhd".
 INFO:Xst:1799 - State sendt10w is never reached in FSM <p_state>.
 INFO:Xst:1799 - State sendt11w is never reached in FSM <p_state>.
 INFO:Xst:1799 - State sendt12w is never reached in FSM <p_state>.
@@ -327,7 +332,7 @@ Unit <word_TX> synthesized.
 
 
 Synthesizing Unit <byte_TX>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/byte_TX.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/byte_TX.vhd".
     Found finite state machine <FSM_1> for signal <p_state>.
     -----------------------------------------------------------------------
     | States             | 29                                             |
@@ -355,7 +360,7 @@ Unit <byte_TX> synthesized.
 
 
 Synthesizing Unit <bit_TX>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/bit_TX.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/bit_TX.vhd".
     Found finite state machine <FSM_2> for signal <p_state>.
     -----------------------------------------------------------------------
     | States             | 11                                             |
@@ -376,7 +381,7 @@ Unit <bit_TX> synthesized.
 
 
 Synthesizing Unit <slow_clk>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/slow_clk.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/slow_clk.vhd".
     Found 14-bit up counter for signal <count>.
     Found 14-bit comparator equal for signal <count$cmp_eq0000> created at line 29.
     Found 1-bit register for signal <Toggle>.
@@ -388,7 +393,7 @@ Unit <slow_clk> synthesized.
 
 
 Synthesizing Unit <debouncer_fsm>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_fsm.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer_fsm.vhd".
     Found finite state machine <FSM_3> for signal <p_state>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
@@ -413,7 +418,7 @@ Unit <debouncer_fsm> synthesized.
 
 
 Synthesizing Unit <debouncer_counter>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer_counter.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer_counter.vhd".
     Found 20-bit up counter for signal <count>.
     Found 20-bit comparator less for signal <count$cmp_lt0000> created at line 25.
     Summary:
@@ -423,7 +428,7 @@ Unit <debouncer_counter> synthesized.
 
 
 Synthesizing Unit <control_fsm>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/control_fsm.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/control_fsm.vhd".
 WARNING:Xst:737 - Found 32-bit latch for signal <seed>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 4x44-bit ROM for signal <seed_sel$rom0000>.
     Found 32-bit register for signal <s>.
@@ -439,19 +444,22 @@ Unit <control_fsm> synthesized.
 
 
 Synthesizing Unit <debouncer>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/debouncer.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/debouncer.vhd".
 WARNING:Xst:1305 - Output <load_copy> is never assigned. Tied to value 0.
 Unit <debouncer> synthesized.
 
 
 Synthesizing Unit <UA_TX>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/UA_TX/UA_TX.vhd".
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/UA_TX/UA_TX.vhd".
 Unit <UA_TX> synthesized.
 
 
 Synthesizing Unit <prng_toplevel>.
-    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/prng_toplevel.vhd".
-WARNING:Xst:1780 - Signal <reset_buf> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Users/bowenliu/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/prng_ise13/prng_toplevel.vhd".
+    Found 1-bit register for signal <clk_counter<0>>.
+    Found 1-bit register for signal <clk_slow>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
 Unit <prng_toplevel> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -474,8 +482,8 @@ Macro Statistics
 # Counters                                             : 3
  14-bit up counter                                     : 1
  20-bit up counter                                     : 2
-# Registers                                            : 50
- 1-bit register                                        : 37
+# Registers                                            : 52
+ 1-bit register                                        : 39
  2-bit register                                        : 2
  32-bit register                                       : 9
  5-bit register                                        : 1
@@ -703,8 +711,8 @@ Macro Statistics
  20-bit up counter                                     : 2
 # Accumulators                                         : 1
  32-bit down loadable accumulator                      : 1
-# Registers                                            : 295
- Flip-Flops                                            : 295
+# Registers                                            : 297
+ Flip-Flops                                            : 297
 # Latches                                              : 6
  1-bit latch                                           : 1
  2-bit latch                                           : 2
@@ -808,6 +816,26 @@ INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_21> in Unit <prng_
 INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_22> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <UART/word_TX_instance/seed_data_13> 
 INFO:Xst:2261 - The FF/Latch <UART/word_TX_instance/seed_data_25> in Unit <prng_toplevel> is equivalent to the following 2 FFs/Latches, which will be removed : <UART/word_TX_instance/seed_data_24> <UART/word_TX_instance/seed_data_23> 
 Found area constraint ratio of 100 (+ 5) on block prng_toplevel, actual ratio is 7.
+Forward register balancing over carry chain PRNG/DIV/Mcompar_py_cmp_gt0000_cy<0>
+INFO:Xst:2261 - The FF/Latch <PRNG/DIV/Y_buffer_24> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <PRNG/DIV/Mcompar_py_cmp_gt0000_cy<6>_FRB_BRB0> 
+INFO:Xst:2261 - The FF/Latch <PRNG/DIV/Y_buffer_25> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <PRNG/DIV/Mcompar_py_cmp_gt0000_cy<6>_FRB_BRB1> 
+INFO:Xst:2261 - The FF/Latch <PRNG/DIV/Y_buffer_26> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <PRNG/DIV/Mcompar_py_cmp_gt0000_cy<6>_FRB_BRB2> 
+INFO:Xst:2261 - The FF/Latch <PRNG/DIV/Y_buffer_27> in Unit <prng_toplevel> is equivalent to the following FF/Latch, which will be removed : <PRNG/DIV/Mcompar_py_cmp_gt0000_cy<6>_FRB_BRB3> 
+
+Pipelining and Register Balancing Report ...
+
+Processing Unit <prng_toplevel> :
+	Register(s) PRNG/DIV/Y_buffer_11 PRNG/DIV/Y_buffer_10 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<3>17_FRB.
+	Register(s) PRNG/DIV/Y_buffer_2 PRNG/DIV/Y_buffer_4 PRNG/DIV/Y_buffer_5 PRNG/DIV/Y_buffer_3 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<3>117_FRB.
+	Register(s) PRNG/DIV/Y_buffer_2 PRNG/DIV/Y_buffer_5 PRNG/DIV/Y_buffer_4 PRNG/DIV/Y_buffer_3 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<3>1228_FRB.
+	Register(s) PRNG/DIV/Y_buffer_6 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<4>134_FRB.
+	Register(s) PRNG/DIV/Y_buffer_7 PRNG/DIV/Y_buffer_6 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<3>18_FRB.
+	Register(s) PRNG/DIV/Y_buffer_9 PRNG/DIV/Y_buffer_8 has(ve) been forward balanced into : PRNG/DIV/py_mux0004<3>127_FRB.
+	Register(s) PRNG/DIV/py_2 PRNG/DIV/py_3 PRNG/DIV/py_0 PRNG/DIV/py_1 has(ve) been forward balanced into : PRNG/DIV/Z_cmp_gt00001_FRB.
+	Register(s) PRNG/DIV/py_mux0004<4>114_FRB PRNG/DIV/Y_buffer_4 PRNG/DIV/py_mux0004<4>10_FRB has(ve) been forward balanced into : PRNG/DIV/py_mux0004<4>126_FRB.
+	Register(s) PRNG/DIV/py_mux0004<4>1501_FRB PRNG/DIV/py_mux0004<4>1466_FRB PRNG/DIV/py_mux0004<4>1485_FRB has(ve) been forward balanced into : PRNG/DIV/py_mux0004<4>1503_FRB.
+	Register(s) PRNG/div_start has(ve) been forward balanced into : PRNG/DIV/Y_buffer_eqn_inv2_FRB.
+Unit <prng_toplevel> processed.
 
 Final Macro Processing ...
 
@@ -815,8 +843,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 415
- Flip-Flops                                            : 415
+# Registers                                            : 434
+ Flip-Flops                                            : 434
 
 =========================================================================
 
@@ -842,41 +870,44 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 45
+# IOs                              : 46
 
 Cell Usage :
-# BELS                             : 1820
+# BELS                             : 1842
 #      GND                         : 1
-#      INV                         : 56
+#      INV                         : 58
 #      LUT1                        : 21
-#      LUT2                        : 228
-#      LUT3                        : 249
-#      LUT3_L                      : 3
-#      LUT4                        : 547
-#      LUT4_D                      : 1
-#      LUT4_L                      : 10
+#      LUT2                        : 236
+#      LUT2_D                      : 1
+#      LUT3                        : 259
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 541
+#      LUT4_D                      : 5
+#      LUT4_L                      : 22
 #      MUXCY                       : 368
-#      MUXF5                       : 60
+#      MUXF5                       : 51
 #      VCC                         : 1
 #      XORCY                       : 275
-# FlipFlops/Latches                : 464
-#      FD_1                        : 5
+# FlipFlops/Latches                : 483
+#      FD_1                        : 6
 #      FDC                         : 102
-#      FDCE                        : 171
+#      FDCE                        : 180
 #      FDCPE                       : 32
-#      FDE                         : 86
+#      FDE                         : 87
 #      FDP                         : 3
+#      FDPE                        : 8
 #      FDR                         : 14
 #      FDS_1                       : 2
 #      LD                          : 12
 #      LD_1                        : 1
 #      LDE                         : 36
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 3
 #      BUFGP                       : 1
-# IO Buffers                       : 44
+# IO Buffers                       : 45
 #      IBUF                        : 9
-#      OBUF                        : 35
+#      OBUF                        : 36
 # MULTs                            : 4
 #      MULT18X18SIO                : 4
 =========================================================================
@@ -886,13 +917,13 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-5 
 
- Number of Slices:                      607  out of   8672     6%  
- Number of Slice Flip Flops:            464  out of  17344     2%  
- Number of 4 input LUTs:               1115  out of  17344     6%  
- Number of IOs:                          45
- Number of bonded IOBs:                  45  out of    250    18%  
+ Number of Slices:                      626  out of   8672     7%  
+ Number of Slice Flip Flops:            483  out of  17344     2%  
+ Number of 4 input LUTs:               1146  out of  17344     6%  
+ Number of IOs:                          46
+ Number of bonded IOBs:                  46  out of    250    18%  
  Number of MULT18X18SIOs:                 4  out of     28    14%  
- Number of GCLKs:                         3  out of     24    12%  
+ Number of GCLKs:                         4  out of     24    16%  
 
 ---------------------------
 Partition Resource Summary:
@@ -915,9 +946,10 @@ Clock Information:
 -------------------------------------------------+---------------------------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)                       | Load  |
 -------------------------------------------------+---------------------------------------------+-------+
-clk                                              | BUFGP                                       | 404   |
+clk                                              | BUFGP                                       | 199   |
 UART/slow_clk_instance/Toggle                    | NONE(UART/bit_TX_instance/p_state_FSM_FFd10)| 11    |
 UART/byte_TX_instance/p_state_FSM_FFd4           | NONE(UART/byte_TX_instance/byte_TX_ready)   | 1     |
+clk_slow1                                        | BUFG                                        | 224   |
 PRNG/DIV/Z_cmp_gt00002(PRNG/DIV/Z_cmp_gt000011:O)| BUFG(*)(PRNG/DIV/delta_pos_0)               | 36    |
 reset                                            | IBUF+BUFG                                   | 12    |
 -------------------------------------------------+---------------------------------------------+-------+
@@ -931,7 +963,7 @@ Asynchronous Control Signals Information:
 -----------------------------------------+------------------------+-------+
 Control Signal                           | Buffer(FF name)        | Load  |
 -----------------------------------------+------------------------+-------+
-reset                                    | IBUF                   | 278   |
+reset                                    | IBUF                   | 295   |
 PRNG/s0_26_and0000(PRNG/s0_26_and00001:O)| NONE(PRNG/s0_0)        | 9     |
 PRNG/s0_26_and0001(PRNG/s0_26_and00011:O)| NONE(PRNG/s0_0)        | 9     |
 PRNG/s0_19_and0000(PRNG/s0_19_and00001:O)| NONE(PRNG/s0_1)        | 7     |
@@ -953,8 +985,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 21.358ns (Maximum Frequency: 46.821MHz)
-   Minimum input arrival time before clock: 6.867ns
+   Minimum period: 19.400ns (Maximum Frequency: 51.547MHz)
+   Minimum input arrival time before clock: 6.884ns
    Maximum output required time after clock: 11.373ns
    Maximum combinational path delay: No path found
 
@@ -964,35 +996,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 21.358ns (frequency: 46.821MHz)
-  Total number of paths / destination ports: 151787877 / 693
+  Clock period: 9.872ns (frequency: 101.297MHz)
+  Total number of paths / destination ports: 10750 / 219
 -------------------------------------------------------------------------
-Delay:               10.679ns (Levels of Logic = 11)
-  Source:            PRNG/DIV/Y_buffer_5 (FF)
-  Destination:       PRNG/DIV/py_1 (FF)
+Delay:               9.872ns (Levels of Logic = 10)
+  Source:            UART/word_TX_instance/p_state_FSM_FFd25 (FF)
+  Destination:       UART/byte_TX_instance/p_state_FSM_FFd26 (FF)
   Source Clock:      clk rising
-  Destination Clock: clk falling
+  Destination Clock: clk rising
 
-  Data Path: PRNG/DIV/Y_buffer_5 to PRNG/DIV/py_1
+  Data Path: UART/word_TX_instance/p_state_FSM_FFd25 to UART/byte_TX_instance/p_state_FSM_FFd26
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            11   0.514   0.796  PRNG/DIV/Y_buffer_5 (PRNG/DIV/Y_buffer_5)
-     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>117 (PRNG/DIV/py_mux0004<3>117)
-     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>139_SW0 (N216)
-     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>139 (PRNG/DIV/py_mux0004<3>139)
-     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>184_SW0 (N220)
-     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>184 (PRNG/DIV/py_mux0004<3>184)
-     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1121_SW0 (N224)
-     LUT4:I3->O            1   0.612   0.387  PRNG/DIV/py_mux0004<3>1121 (PRNG/DIV/py_mux0004<3>1121)
-     LUT3_L:I2->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1172_SW0 (N244)
-     LUT4:I3->O            1   0.612   0.387  PRNG/DIV/py_mux0004<3>1172 (PRNG/DIV/py_mux0004<3>1172)
-     LUT3_L:I2->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>1392_SW0 (N254)
-     LUT4:I3->O            1   0.612   0.000  PRNG/DIV/py_mux0004<3>1392 (PRNG/DIV/py_mux0004<3>)
-     FD_1:D                    0.268          PRNG/DIV/py_1
+     FDC:C->Q              4   0.514   0.651  UART/word_TX_instance/p_state_FSM_FFd25 (UART/word_TX_instance/p_state_FSM_FFd25)
+     LUT4:I0->O            1   0.612   0.360  UART/word_TX_instance/byte_out<0>9_SW0 (N22)
+     LUT4:I3->O            2   0.612   0.532  UART/word_TX_instance/byte_out<0>9 (UART/word_TX_instance/N16)
+     LUT4:I0->O            1   0.612   0.000  UART/word_TX_instance/byte_out<3>211 (UART/word_TX_instance/byte_out<3>21)
+     MUXF5:I0->O           2   0.278   0.532  UART/word_TX_instance/byte_out<3>21_f5 (UART/word_TX_instance/N7)
+     LUT3:I0->O            2   0.612   0.410  UART/word_TX_instance/byte_out_valid115 (UART/word_TX_instance/N3)
+     LUT4:I2->O            1   0.612   0.000  UART/word_TX_instance/byte_out_valid_wg_lut<3> (UART/word_TX_instance/byte_out_valid_wg_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  UART/word_TX_instance/byte_out_valid_wg_cy<3> (UART/word_TX_instance/byte_out_valid_wg_cy<3>)
+     MUXCY:CI->O          10   0.289   0.902  UART/word_TX_instance/byte_out_valid_wg_cy<4> (UART/word_TX_byte_out_valid_internal)
+     LUT3:I0->O            2   0.612   0.449  UART/byte_TX_instance/p_state_FSM_FFd26-In11 (UART/byte_TX_instance/N44)
+     LUT4:I1->O            1   0.612   0.000  UART/byte_TX_instance/p_state_FSM_FFd26-In1 (UART/byte_TX_instance/p_state_FSM_FFd26-In)
+     FDC:D                     0.268          UART/byte_TX_instance/p_state_FSM_FFd26
     ----------------------------------------
-    Total                     10.679ns (7.514ns logic, 3.165ns route)
-                                       (70.4% logic, 29.6% route)
+    Total                      9.872ns (6.036ns logic, 3.835ns route)
+                                       (61.1% logic, 38.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'UART/slow_clk_instance/Toggle'
@@ -1017,10 +1048,41 @@ Delay:               2.536ns (Levels of Logic = 1)
                                        (55.0% logic, 45.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 535 / 110
+Timing constraint: Default period analysis for Clock 'clk_slow1'
+  Clock period: 19.400ns (frequency: 51.547MHz)
+  Total number of paths / destination ports: 151794082 / 433
 -------------------------------------------------------------------------
-Offset:              6.867ns (Levels of Logic = 6)
+Delay:               9.700ns (Levels of Logic = 10)
+  Source:            PRNG/DIV/py_mux0004<3>127_FRB (FF)
+  Destination:       PRNG/DIV/Z_cmp_gt00001_FRB (FF)
+  Source Clock:      clk_slow1 rising
+  Destination Clock: clk_slow1 falling
+
+  Data Path: PRNG/DIV/py_mux0004<3>127_FRB to PRNG/DIV/Z_cmp_gt00001_FRB
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.514   0.509  PRNG/DIV/py_mux0004<3>127_FRB (PRNG/DIV/py_mux0004<3>127_FRB)
+     LUT4_L:I0->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>139 (PRNG/DIV/py_mux0004<3>139)
+     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>184_SW0 (N374)
+     LUT4_L:I3->LO         1   0.612   0.103  PRNG/DIV/py_mux0004<3>184 (PRNG/DIV/py_mux0004<3>184)
+     LUT4:I3->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>1121_SW1 (N442)
+     LUT4_L:I3->LO         1   0.612   0.130  PRNG/DIV/py_mux0004<3>1121 (PRNG/DIV/py_mux0004<3>1121)
+     LUT3:I2->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>1172_SW0 (N398)
+     LUT4_L:I3->LO         1   0.612   0.130  PRNG/DIV/py_mux0004<3>1172 (PRNG/DIV/py_mux0004<3>1172)
+     LUT3:I2->O            1   0.612   0.360  PRNG/DIV/py_mux0004<3>1392_SW0 (N408)
+     LUT4:I3->O            2   0.612   0.383  PRNG/DIV/py_mux0004<3>1392 (PRNG/DIV/py_mux0004<3>)
+     LUT4:I3->O            1   0.612   0.000  PRNG/DIV/Z_cmp_gt00001 (N315)
+     FD_1:D                    0.268          PRNG/DIV/Z_cmp_gt00001_FRB
+    ----------------------------------------
+    Total                      9.700ns (6.902ns logic, 2.798ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 499 / 74
+-------------------------------------------------------------------------
+Offset:              6.884ns (Levels of Logic = 6)
   Source:            test_word_TX (PAD)
   Destination:       UART/byte_TX_instance/p_state_FSM_FFd26 (FF)
   Destination Clock: clk rising
@@ -1029,16 +1091,16 @@ Offset:              6.867ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   1.106   0.599  test_word_TX_IBUF (test_word_TX_IBUF)
-     LUT4:I2->O            3   0.612   0.454  UART/test_word_instance/debouncer_fsm_instance/x_out1 (UART/test_word_TX_internal)
+     IBUF:I->O             5   1.106   0.568  test_word_TX_IBUF (test_word_TX_IBUF)
+     LUT4:I2->O            4   0.612   0.502  UART/test_word_instance/debouncer_fsm_instance/x_out1 (UART/test_word_TX_internal)
      LUT4:I3->O            1   0.612   0.000  UART/word_TX_instance/byte_out_valid_wg_lut<4> (UART/word_TX_instance/byte_out_valid_wg_lut<4>)
      MUXCY:S->O           10   0.641   0.902  UART/word_TX_instance/byte_out_valid_wg_cy<4> (UART/word_TX_byte_out_valid_internal)
      LUT3:I0->O            2   0.612   0.449  UART/byte_TX_instance/p_state_FSM_FFd26-In11 (UART/byte_TX_instance/N44)
      LUT4:I1->O            1   0.612   0.000  UART/byte_TX_instance/p_state_FSM_FFd26-In1 (UART/byte_TX_instance/p_state_FSM_FFd26-In)
      FDC:D                     0.268          UART/byte_TX_instance/p_state_FSM_FFd26
     ----------------------------------------
-    Total                      6.867ns (4.463ns logic, 2.404ns route)
-                                       (65.0% logic, 35.0% route)
+    Total                      6.884ns (4.463ns logic, 2.421ns route)
+                                       (64.8% logic, 35.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
@@ -1061,8 +1123,28 @@ Offset:              3.332ns (Levels of Logic = 2)
                                        (59.6% logic, 40.4% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_slow1'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              4.574ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       PRNG/s_31 (FF)
+  Destination Clock: clk_slow1 rising
+
+  Data Path: reset to PRNG/s_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           312   1.106   1.300  reset_IBUF (reset_IBUF1)
+     LUT4:I0->O           32   0.612   1.073  PRNG/s_and00001 (PRNG/s_and0000)
+     FDE:CE                    0.483          PRNG/s_0
+    ----------------------------------------
+    Total                      4.574ns (2.201ns logic, 2.373ns route)
+                                       (48.1% logic, 51.9% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 280 / 35
+  Total number of paths / destination ports: 248 / 3
 -------------------------------------------------------------------------
 Offset:              11.373ns (Levels of Logic = 8)
   Source:            UART/byte_TX_instance/p_state_FSM_FFd28 (FF)
@@ -1076,15 +1158,34 @@ Offset:              11.373ns (Levels of Logic = 8)
      FDC:C->Q              5   0.514   0.690  UART/byte_TX_instance/p_state_FSM_FFd28 (UART/byte_TX_instance/p_state_FSM_FFd28)
      LUT4:I0->O            2   0.612   0.532  UART/byte_TX_instance/byte_out<1>31 (UART/byte_TX_instance/N39)
      LUT4:I0->O            1   0.612   0.360  UART/bit_TX_instance/bit_out355 (UART/bit_TX_instance/bit_out355)
-     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out463_SW0_SW0 (N330)
-     LUT4:I3->O            1   0.612   0.387  UART/bit_TX_instance/bit_out463_SW0 (N240)
+     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out463_SW0_SW0 (N470)
+     LUT4:I3->O            1   0.612   0.387  UART/bit_TX_instance/bit_out463_SW0 (N390)
      LUT4:I2->O            1   0.612   0.360  UART/bit_TX_instance/bit_out463 (UART/bit_TX_instance/bit_out463)
-     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out589_SW0 (N242)
+     LUT4:I3->O            1   0.612   0.360  UART/bit_TX_instance/bit_out589_SW0 (N392)
      LUT4:I3->O            1   0.612   0.357  UART/bit_TX_instance/bit_out589 (bit_out_OBUF)
      OBUF:I->O                 3.169          bit_out_OBUF (bit_out)
     ----------------------------------------
     Total                     11.373ns (7.967ns logic, 3.406ns route)
                                        (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_slow1'
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            PRNG/prng_busy (FF)
+  Destination:       PRNG_busy (PAD)
+  Source Clock:      clk_slow1 rising
+
+  Data Path: PRNG/prng_busy to PRNG_busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  PRNG/prng_busy (PRNG/prng_busy)
+     OBUF:I->O                 3.169          PRNG_busy_OBUF (PRNG_busy)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'UART/slow_clk_instance/Toggle'
@@ -1102,7 +1203,7 @@ Offset:              8.942ns (Levels of Logic = 7)
      FDC:C->Q              3   0.514   0.603  UART/bit_TX_instance/p_state_FSM_FFd5 (UART/bit_TX_instance/p_state_FSM_FFd5)
      LUT4:I0->O            1   0.612   0.000  UART/bit_TX_instance/bit_out201 (UART/bit_TX_instance/bit_out201)
      MUXF5:I0->O           1   0.278   0.426  UART/bit_TX_instance/bit_out20_f5 (UART/bit_TX_instance/bit_out20)
-     LUT4:I1->O            1   0.612   0.000  UART/bit_TX_instance/bit_out50_F (N338)
+     LUT4:I1->O            1   0.612   0.000  UART/bit_TX_instance/bit_out50_F (N480)
      MUXF5:I0->O           1   0.278   0.360  UART/bit_TX_instance/bit_out50 (UART/bit_TX_instance/bit_out50)
      LUT4:I3->O            1   0.612   0.509  UART/bit_TX_instance/bit_out136 (UART/bit_TX_instance/bit_out136)
      LUT4:I0->O            1   0.612   0.357  UART/bit_TX_instance/bit_out589 (bit_out_OBUF)
@@ -1115,7 +1216,7 @@ Offset:              8.942ns (Levels of Logic = 7)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'UART/byte_TX_instance/p_state_FSM_FFd4'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              6.100ns (Levels of Logic = 2)
+Offset:              5.982ns (Levels of Logic = 2)
   Source:            UART/byte_TX_instance/byte_TX_ready (LATCH)
   Destination:       UA_TX_ready (PAD)
   Source Clock:      UART/byte_TX_instance/p_state_FSM_FFd4 rising
@@ -1124,24 +1225,24 @@ Offset:              6.100ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD_1:G->Q            60   0.588   1.232  UART/byte_TX_instance/byte_TX_ready (UART/byte_TX_instance/byte_TX_ready)
-     LUT3:I0->O            4   0.612   0.499  UART/word_TX_instance/word_TX_ready349 (UA_TX_ready_OBUF)
+     LD_1:G->Q            61   0.588   1.233  UART/byte_TX_instance/byte_TX_ready (UART/byte_TX_instance/byte_TX_ready)
+     LUT3:I0->O            2   0.612   0.380  UART/word_TX_instance/word_TX_ready349 (UA_TX_ready_OBUF)
      OBUF:I->O                 3.169          UA_TX_ready_OBUF (UA_TX_ready)
     ----------------------------------------
-    Total                      6.100ns (4.369ns logic, 1.731ns route)
-                                       (71.6% logic, 28.4% route)
+    Total                      5.982ns (4.369ns logic, 1.613ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.52 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.57 secs
  
 --> 
 
 Total memory usage is 303752 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  110 (   0 filtered)
-Number of infos    :   40 (   0 filtered)
+Number of warnings :  109 (   0 filtered)
+Number of infos    :   44 (   0 filtered)
 

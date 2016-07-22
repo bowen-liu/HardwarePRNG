@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-07-18T23:27:43</DateModified>
-  <ModuleName>control_fsm</ModuleName>
+  <DateModified>2016-07-20T19:29:00</DateModified>
+  <ModuleName>prng_toplevel</ModuleName>
   <SummaryTimeStamp>2016-07-18T23:27:21</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG/iseconfig/control_fsm.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/OWner/Documents/ceng441/UvicSummer2016Ceng441/PRNG_VHDL/PRNG\</ImplementationReportsDirectory>
-  <DateInitialized>2016-07-10T14:53:29</DateInitialized>
+  <SavedFilePath>C:/Users/OWner/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG/iseconfig/control_fsm.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/OWner/Desktop/UvicSummer2016Ceng441-master/PRNG_VHDL/PRNG\</ImplementationReportsDirectory>
+  <DateInitialized>2016-07-20T19:29:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

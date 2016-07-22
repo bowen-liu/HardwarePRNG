@@ -32,19 +32,19 @@ end divider;
 architecture Behavioral of divider is
 	
 	--Primary registers that holds the operands and accumulates the results during each iteration
-	signal Y_buffer : STD_LOGIC_VECTOR (width-1 downto 0);
-	signal X_buffer : STD_LOGIC_VECTOR (width-1 downto 0);
-	signal Z : STD_LOGIC_VECTOR (width-1 downto 0) := (others => '0');
+	signal Y_buffer : SIGNED (width-1 downto 0);
+	signal X_buffer : SIGNED (width-1 downto 0);
+	signal Z : SIGNED (width-1 downto 0) := (others => '0');
 	
 	--Secondary registers holding independant function results needed by iteration
 	signal px, py : Integer;
 	signal mu_phase1 : Integer;
 	signal mu_phase2 : Integer;
 	signal delta_pos : integer;
-	signal delta : STD_LOGIC_VECTOR (width-1 downto 0);
+	signal delta : SIGNED (width-1 downto 0);
 	
 	--Given a STL input X, find the most significant bit of X that's 1.
-	function findMS1(X : in  STD_LOGIC_VECTOR) return Integer is
+	function findMS1(X : in  SIGNED) return Integer is
 	begin
 			for i in width-1 downto 0 loop
 				if (X(i) = '1') then
@@ -57,8 +57,8 @@ architecture Behavioral of divider is
 	end function findMS1;
 	
 	--Given a STL input X, find the most significant bit of X that's 0.
-	function findMS0(X : in  STD_LOGIC_VECTOR) return Integer is
-		variable negated_x : STD_LOGIC_VECTOR (width-1 downto 0);
+	function findMS0(X : in  SIGNED) return Integer is
+		variable negated_x : SIGNED (width-1 downto 0);
 	begin
 			negated_x := not X;
 			for i in width-1 downto 0 loop
@@ -92,29 +92,27 @@ architecture Behavioral of divider is
 begin
 
 	--Output intermediate debug values
-	Y_buf_dbg <= Y_buffer;
-	X_buf_dbg <= X_buffer;
-	Z_dbg <= Z;
+	Y_buf_dbg <= std_logic_vector(Y_buffer);
+	X_buf_dbg <= std_logic_vector(X_buffer);
+	Z_dbg <= std_logic_vector(Z);
 	px_dbg <= std_logic_vector(to_signed(px, X'length));
 	py_dbg <= std_logic_vector(to_signed(py, Y'length));
 	mu1_dbg <= std_logic_vector(to_signed(mu_phase1, Y'length));
 	mu2_dbg <= std_logic_vector(to_signed(mu_phase2, Y'length));
-	delta_dbg <= delta;
+	delta_dbg <= std_logic_vector(delta);
 	
 	
 	--Generates values for PY on the falling edge
 	process(clk)
 	begin
 		if(clk = '0' and clk'event) then
-		
-			if(signed(Y_buffer) < 0) then				--Find the Most Significant 0 if Y<0. 
+			if(Y_buffer < 0) then				--Find the Most Significant 0 if Y<0. 
 				py <= findMS0(Y_buffer);
-			elsif(signed(Y_buffer) > 0) then			--If Y>0, the MS 1 is found instead. 
+			elsif(Y_buffer > 0) then			--If Y>0, the MS 1 is found instead. 
 				py <= findMS1(Y_buffer);
 			else												--If Y=0, the process will return a 0 since a MS 1 cannot be found.
 				py <= 0;
 			end if;
-			
 		end if;
 	end process;
 	
@@ -130,7 +128,7 @@ begin
 	--Since Delta depends on py and px, the process is asynchronous and updates the value whenever py or px changes.
 	process(py,px)
 		variable bit_pos : integer;
-		variable delta_temp : std_logic_vector(width-1 downto 0);
+		variable delta_temp : SIGNED (width-1 downto 0);
 	begin
 		bit_pos := py - px;
 		
@@ -147,7 +145,7 @@ begin
 	process(clk)
 	begin
 		if(clk = '0' and clk'event) then
-			if(signed(Y_buffer) >= 0) then
+			if(Y_buffer >= 0) then
 				mu_phase1 <= 1;
 			else
 				mu_phase1 <= -1;
@@ -159,7 +157,7 @@ begin
 	process(clk)
 	begin
 		if(clk = '0' and clk'event) then
-			if(signed(Y_buffer) >= signed(X_buffer)) then
+			if(Y_buffer >= X_buffer) then
 				mu_phase2 <= 1;
 			else
 				mu_phase2 <= -1;	--When Y<0
@@ -188,8 +186,8 @@ begin
 			
 			--Load the initial operand values when the divider's idle
 			if(start = '1') then
-				Y_buffer <= Y;
-				X_buffer <= X;
+				Y_buffer <= signed(Y);
+				X_buffer <= signed(X);
 		
 				--Reset all registers
 				Z <= (others => '0');
@@ -202,30 +200,30 @@ begin
 				
 				--Calculate Y value for this iteration. Y = Y - mu * delta * X.
 				--We can use logical shift left to accomplish the multiplication of delta and X, since delta is always a power of 2.
-				tempi1 := to_integer(signed(X_buffer) sll delta_pos);
-				tempi2 := to_integer(signed(Y_buffer)) - mu_multiply(tempi1, mu_phase1);	
-				Y_buffer <= std_logic_vector(to_signed(tempi2,Y_buffer'length));
+				tempi1 := to_integer(X_buffer sll delta_pos);
+				tempi2 := to_integer(Y_buffer) - mu_multiply(tempi1, mu_phase1);	
+				Y_buffer <= to_signed(tempi2,Y_buffer'length);
 				
 				--Calculate Z value for this iteration. Z = Z + delta * mu
-				tempi3 := to_integer(signed(Z)) + mu_multiply(to_integer(signed(delta)), mu_phase1);	
-				Z <= std_logic_vector(to_signed(tempi3,Z'length));
+				tempi3 := to_integer(Z) + mu_multiply(to_integer(delta), mu_phase1);	
+				Z <= to_signed(tempi3,Z'length);
 				
 			--Run one iteration of Algorithm Phase 2
 			else	
 				--Does quotient and remainder needs adjustments?
-				if(not(signed(Y_buffer) >= 0 and signed(Y_buffer) < signed(X_buffer))) then
+				if(not(Y_buffer >= 0 and Y_buffer < X_buffer)) then
 					
 					--Calculate Y value for this iteration. Y = Y - X * mu_2
-					tempi1 := to_integer(signed(Y_buffer)) - mu_multiply(to_integer(signed(X_buffer)), mu_phase2);	
-					Y_buffer <= std_logic_vector(to_signed(tempi1,Y_buffer'length));
+					tempi1 := to_integer(Y_buffer) - mu_multiply(to_integer(X_buffer), mu_phase2);	
+					Y_buffer <= to_signed(tempi1,Y_buffer'length);
 					
 					--Calculate Z value for this iteration. Z = Z + mu_2
-					tempi2 := to_integer(signed(Z)) + mu_phase2;				
-					Z <= std_logic_vector(to_signed(tempi2,Z'length));
+					tempi2 := to_integer(Z) + mu_phase2;				
+					Z <= to_signed(tempi2,Z'length);
 				else
 					--Output the results
-					R <= Y_buffer;
-					Q <= Z;
+					R <= std_logic_vector(Y_buffer);
+					Q <= std_logic_vector(Z);
 					output_ready <= '1';	
 				end if;	
 			end if;
